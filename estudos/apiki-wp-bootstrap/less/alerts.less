@@ -1,0 +1,32 @@
+//
+// Alerts
+// --------------------------------------------------
+
+.alert, .success, .info, .warning, .error {
+	border: 1px solid;
+	margin: 0 0 10px 0;
+    padding: 12px 35px 12px 14px;
+	font-size: @baseFontSize + 4; // 14px
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	.border-radius(4px);
+	color: 		  @colorTextWarning;
+}
+.alert, .warning {
+	background:   @bgAlert; 
+	border-color: @alertBorderColor;
+}
+.success {
+	color: 		  @colorTextSuccess;
+	background:   @bgSuccess; 
+	border-color: @successBorderColor;
+}
+.info {
+	color: 		  @colorTextInfo;
+	background:   @bgInfo; 
+	border-color: @infoBorderColor;
+}
+.error {
+	color: 		  @colorTextError;
+	background:   @bgError; 
+	border-color: @errorBorderColor;
+}
