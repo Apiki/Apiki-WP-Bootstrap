@@ -5,6 +5,22 @@
 	<title>FrameWork</title>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style>
+body {background:#f9f9f9}
+.box {
+	border: 1px solid #ddd;
+	padding: 20px;
+	margin: 50px;
+	border-radius: 6px;
+	background-color: #fff;
+}
+hr {
+	margin-bottom:10px;
+	display: block;
+	height:1px;
+
+}
+	</style>
 </head>
 <body>
 	<section class="container">
@@ -81,6 +97,51 @@
 						<p>
 							I could have gone to war with this view with CSS and smashed it into shape. But even if I did that, there was quite a bit of JavaScript being loaded that no longer had any purpose. Instead, I decided to go with a mobile specific template. This way I was able to take complete control of the HTML, CSS, and JavaScript and only load what was needed. I was able to re-use almost everything, because we approached everything from a modular perspective. I could pick the HTML partials, JS modules, and compile a new CSS file of just the bits I needed - writing very little from scratch.
 						</p>
+
+						<table>
+					   <thead>
+					      <tr>
+					         <th>Company</th>
+					         <th>Ask</th>
+					         <th>1y Target Est</th>
+					      </tr>
+					   </thead>
+					   <tbody>
+					      <tr>
+					         <td>Google Inc.</td>
+					         <td>597.74</td>
+					         <td>12:12PM</td>
+					      </tr>      
+					      <tr>
+					         <td>378.92 x 300</td>
+					         <td>378.99 x 100</td>
+					         <td>505.94</td>
+					      </tr>  
+					      <tr>
+					         <td>Google Inc.</td>
+					         <td>597.74</td>
+					         <td>12:12PM</td>
+					      </tr>      
+					      <tr>
+					         <td>378.92 x 300</td>
+					         <td>378.99 x 100</td>
+					         <td>505.94</td>
+					      </tr>           
+					   </tbody>
+					</table>
+
+
+					<address>
+					    <strong>Twitter, Inc.</strong><br>
+					    795 Folsom Ave, Suite 600<br>
+					    San Francisco, CA 94107<br>
+					    <abbr title="Phone">P:</abbr> (123) 456-7890
+				    </address>
+				     
+				    <address>
+					    <strong>Full Name</strong><br>
+					    <a href="mailto:#">first.last@example.com</a>
+				    </address>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">
@@ -110,15 +171,23 @@
 		</div>
 
 		<div class="box">
-			<a href="#" class="button">Primário</a>
-			<a href="#" class="button secondary">Secundário</a>
+			<a href="#" class="btn">Default</a>
+			<a href="#" class="btn btn-primary">Primário</a>
+			<a href="#" class="btn btn-secondary">Secundário</a>
+			<a href="#" class="btn btn-danger">Excluir</a>
+			<a href="#" class="btn btn-small">Default</a>
+			<a href="#" class="btn btn-secondary btn-small">Secundário</a>
+			<hr>
+			<a href="#" class="btn btn-full">Default</a>
+			<hr>
+			<a href="#" class="btn btn-full btn-primary">Primário</a>
 		</div>
 
 		<div class="box">
-			<div class="alert">Alerta!</div>
-			<div class="success">Sucesso!</div>
-			<div class="error">Erro!</div>
-			<div class="info">Informação</div>		
+			<div class="msg alert">Alerta!</div>
+			<div class="msg success">Sucesso!</div>
+			<div class="msg error">Erro!</div>
+			<div class="msg info">Informação</div>		
 		</div>
 		
 		<div class="box">
@@ -202,105 +271,47 @@
 				  No mundo atual, o comprometimento entre as equipes assume importantes posições no estabelecimento dos índices pretendidos. Gostaria de enfatizar que a necessidade de renovação processual exige a precisão e a definição do investimento em reciclagem técnica. Acima de tudo, é fundamental ressaltar que a adoção de políticas descentralizadoras estende o alcance e a importância das formas de ação. Gostaria de enfatizar que a execução dos pontos do programa pode nos levar a considerar a reestruturação das posturas dos órgãos dirigentes com relação às suas atribuições. 
 			</p>
 		</div>
-		
-		<div class="box">
-			<table>
-			   <thead>
-			      <tr>
-			         <th>Company</th>
-			         <th>Ask</th>
-			         <th>1y Target Est</th>
-			      </tr>
-			   </thead>
-			   <tbody>
-			      <tr>
-			         <td>Google Inc.</td>
-			         <td>597.74</td>
-			         <td>12:12PM</td>
-			      </tr>      
-			      <tr>
-			         <td>378.92 x 300</td>
-			         <td>378.99 x 100</td>
-			         <td>505.94</td>
-			      </tr>           
-			   </tbody>
-			</table>
-		</div>
-
-		<div class="box post">
-			<address>
-			    <strong>Twitter, Inc.</strong><br>
-			    795 Folsom Ave, Suite 600<br>
-			    San Francisco, CA 94107<br>
-			    <abbr title="Phone">P:</abbr> (123) 456-7890
-		    </address>
-		     
-		    <address>
-			    <strong>Full Name</strong><br>
-			    <a href="mailto:#">first.last@example.com</a>
-		    </address>
-		</div>
 
 		<div class="box">
 			<div class="gallery galleryid-9 gallery-columns-4 gallery-size-thumbnail" id="gallery-1">
 				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="test" href="http://localhost/wp-teste/?attachment_id=81"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/test-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
 				</dl>
 				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="test" href="http://localhost/wp-teste/?attachment_id=101"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/test2-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-				</dl>
-					<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="test5" href="http://localhost/wp-teste/?attachment_id=93"><img width="150" height="150" alt="loremmmmmmm mmmmmmm mmmmmmm" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/test51-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-						<dd class="wp-caption-text gallery-caption">
-						loremmmmmmm
-						</dd>
-					</dl>
-					<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="teste7" href="http://localhost/wp-teste/?attachment_id=88"><img width="150" height="150" alt="teste7" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/teste7-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-				</dl>
-				<br style="clear: both"><dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="teste6" href="http://localhost/wp-teste/?attachment_id=87"><img width="150" height="150" alt="teste6" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/teste6-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-				</dl>
-				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="teste3" href="http://localhost/wp-teste/?attachment_id=86"><img width="150" height="150" alt="teste3" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/teste3-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-				</dl>
-				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="wallpafper" href="http://localhost/wp-teste/?attachment_id=75"><img width="150" height="150" alt="Legenda destta foto" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/wallpafper1-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-						<dd class="wp-caption-text gallery-caption">
-						Legenda destta foto
-						</dd>
-					</dl>
-				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="wallpafper" href="http://localhost/wp-teste/?attachment_id=74"><img width="150" height="150" alt="Legenda desta foto beeeeeemm grandeLegenda desta foto beeeeeemm grandeLegenda desta foto beeeeeemm grandeLegenda desta foto beeeeeemm grandeLegenda desta foto beeeeeemm grandeLegenda desta foto beeeeeemm grande" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/wallpafper-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-					<dd class="wp-caption-text gallery-caption">
-						Legenda desta 
-					</dd>
-				</dl>
-				<br style="clear: both">
-				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="teste2" href="http://localhost/wp-teste/?attachment_id=85"><img width="150" height="150" alt="teste2" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/teste2-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
-				</dl>
-				<dl class="gallery-item">
 					<dt class="gallery-icon">
-						<a title="test5" href="http://localhost/wp-teste/?attachment_id=84"><img width="150" height="150" alt="test5" class="attachment-thumbnail" src="http://localhost/wp-teste/wp-content/uploads/2012/08/test5-150x150.jpg"></a>
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
+					</dt>
+					<dt class="gallery-icon">
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
+					</dt>
+					<dt class="gallery-icon">
+						<a title="test" href="#"><img width="150" height="150" alt="test" class="attachment-thumbnail" src="apiki-wp-bootstrap/img/coilman.jpg"></a>
 					</dt>
 				</dl>
 				<br style="clear: both;">
