@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom:.4em;
 }
 h1, .entry-title, .entry-title a {color: @entry-title;}
-h2 {
+h2, #respond h3 {
 	color:@entry-title;
 	font-size:3em;
 }
@@ -268,7 +268,7 @@ input[type=submit] {
 		tr {
 			.transition(background-color, .3s, linear);
 			border-bottom:1px solid #e7e7e7;
-			&:hover {background-color: #fff;};
+			&:hover {background-color: #fff;}
 		}
 		td, th {
 			padding:15px 20px;
@@ -277,8 +277,6 @@ input[type=submit] {
 		}
 	}
 }
-
-
 
 /////
 //gallery
@@ -293,4 +291,151 @@ input[type=submit] {
 		height:150px;
 		.radius(50%);
 	}
+}
+
+
+/////
+//Comentários
+/////
+#respond {
+	margin: 5em 0;
+
+	h3 {
+		margin-bottom: 1.5em;
+	}
+}
+
+.comment {
+	padding: 0 0 1em 0;
+}
+
+.comment-content {
+	margin: -20px 0 0 95px;
+	float: left;
+	width: 100%;
+}
+
+.commentlist {
+	list-style: none;
+
+	li {
+		float: left;
+		width: 100%;
+		padding: 3em 0;
+		position: relative;
+		border-bottom: 1px solid #ccc;
+
+		&:last-child {
+			border: none;
+		}
+
+		.reply {
+			position: absolute;
+			right: 0;
+			top: 50px;
+			font-size: 1.3em;
+			color: @link;
+		}
+	}
+}
+
+.comment-author {
+	float: left;
+	margin-right: 20px;
+	width: 100%;
+
+	a {
+		display: none;
+	}
+
+	.avatar {
+		width: 64px;
+		height: 64px;
+		float: left;
+		margin: 0 30px 0 0;
+	}
+
+	.fn {
+		float: left;
+		margin: 1em 0;
+		font-size: 1.6em;
+		a {
+			color: @text-normal;
+			display: block;
+		}
+	}
+}
+
+/////
+//Form
+/////
+
+form {
+	background: #f2f2f2;
+	padding: 2em;
+}
+
+textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"] {
+	width: 100%;
+	display: block;
+	border: 1px solid #BDC3C7;
+	color: @text-normal;
+	font-size: 1.2em;
+	font-width: normal;
+	padding: .8em .5em;
+	height: 40px;
+	-webkit-appearance: none;
+	border-radius: 6px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: border .25s linear, color .25s linear;
+	-moz-transition: border .25s linear, color .25s linear;
+	-o-transition: border .25s linear, color .25s linear;
+	transition: border .25s linear, color .25s linear;
+	-webkit-backface-visibility: hidden;
+}
+
+textarea {
+	height: 160px;
+}
+
+textarea:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="date"]:focus, 
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="url"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus, 
+input[type="color"]:focus {
+	border-color: #1ABC9C;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.form-allowed-tags {
+	font-size: 1.3em;
+	margin: -1em .5em 1em;
 }
