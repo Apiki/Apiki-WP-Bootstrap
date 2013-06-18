@@ -148,7 +148,14 @@ p {
   margin: 5em 0;
 }
 #respond h3 {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+}
+#respond input[type="text"] {
+  font-size: 1.1em;
+}
+#respond label {
+  font-size: .9em;
+  margin-bottom: 0em;
 }
 .comment {
   padding: 0 0 1em 0;
@@ -203,7 +210,14 @@ p {
 }
 form {
   background: #f2f2f2;
+  font-size: 1.2em;
   padding: 2em;
+}
+label {
+  font-size: 1.6em;
+  margin-bottom: .6em;
+  display: block;
+  color: #777;
 }
 textarea,
 input[type="text"],
@@ -224,10 +238,11 @@ input[type="color"] {
   display: block;
   border: 1px solid #BDC3C7;
   color: #777777;
-  font-size: 1.2em;
   font-width: normal;
-  padding: .8em .5em;
+  padding: 0 .5em;
+  margin: 0 0 1em 0;
   height: 40px;
+  font-size: 1.3em;
   -webkit-appearance: none;
   border-radius: 6px;
   -webkit-box-shadow: none;
@@ -262,9 +277,30 @@ input[type="color"]:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+textarea.error,
+input[type="text"].error,
+input[type="password"].error,
+input[type="datetime"].error,
+input[type="datetime-local"].error,
+input[type="date"].error,
+input[type="month"].error,
+input[type="time"].error,
+input[type="week"].error,
+input[type="number"].error,
+input[type="email"].error,
+input[type="url"].error,
+input[type="search"].error,
+input[type="tel"].error,
+input[type="color"].error {
+  border-color: #FF675B;
+}
 .form-allowed-tags {
   font-size: 1.3em;
   margin: -1em 0.5em 1em;
+}
+.container {
+  width: 1024px;
+  margin: 0 auto;
 }
 .box {
   border: 1px solid #ddd;
