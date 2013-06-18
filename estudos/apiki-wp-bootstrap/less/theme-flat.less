@@ -12,20 +12,38 @@
   -ms-box-sizing:border-box;
   box-sizing:border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block;}
+.formee:after, .formee hgroup:after, .formee nav:after, .formee footer:after, .formee header:after, .formee section:after, .formee div:after, .formee ol:after, .formee ul:after, .formee li:after, .formee dl:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
 }
+
 /////
 // colors
 /////
 @text-normal: #777;
 @text-em: #2b2b2b;
 @text-primary: #db6b20;
-@link: #ff675b;
+@link: #E74C3C;
 @text-disable: #e7e7e7;
-@entry-title: #3083a7;
+@entry-title: #2980B9;
+
+/////
+// less standards
+/////
+.transition (@prop: all, @time: 1s, @ease: linear) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  -ms-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+.radius (@radius: 4px) {border-radius: @radius;}
+
 
 /////
 // Tipografia
@@ -49,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1, .entry-title, .entry-title a {color: @entry-title;}
 h2, #respond h3 {
-	color:#26ae90;
+	color:@entry-title;
 	font-size:3em;
 }
 h3 {font-size:2.4em;}
@@ -94,6 +112,104 @@ p {
 		}
 	}
 	ol > li {list-style:inside decimal;}
+	address {
+		color:@text-normal;
+		font:normal normal 1.4em/1.4em georgia;
+		margin-bottom:2em;
+		strong {
+			color: @text-em;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+	}
+}
+
+/////
+//buttons
+/////
+.btn, input[type=submit], input[type=reset] {
+	display:inline-block;
+	padding: 15px 40px;
+	.radius(2px);
+	color:#fff;
+	font-size:1.6em;
+	background-color: #bdc3c7;
+	cursor:pointer;
+	.transition(background-color, .3s, linear);
+	&:focus, &:hover {
+		background-color: #cacfd2;
+	}
+	&.btn-small {
+		font-size: 1.4em;
+		padding:10px 30px;
+	}
+	&.btn-full {
+		display: block;
+		width:100%;
+		text-align: center;
+	}
+	&.btn-primary  {
+		background-color: #1abc9c;
+		&:focus, &:hover {
+			background-color: #48c9b0;
+		}
+	}
+	&.btn-secondary {
+		background-color: #2980B9;
+		&:focus, &:hover {
+			background-color: #3498DB;
+		}
+	}
+	&.btn-danger, input[type=reset] {
+		background-color: #e74c3c;
+		&:focus, &:hover {
+			background-color: #ec7063;
+		}
+	}
+}
+input[type=submit] {
+	background-color: #1abc9c;
+	&:focus, &:hover {
+		background-color: #48c9b0;
+	}
+}
+
+/////
+//alert
+/////
+.msg {
+	padding:15px 20px;
+	font-size:1.4em;
+	margin-bottom:1em;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-left: 4px solid #F1C40F;
+	color: @text-normal;
+	&:before {
+		content: "";
+		display: inline-block;
+		margin-left:-27px;
+		margin-right:9px;
+		height:10px;
+		width:10px;
+		background-color: #F1C40F;
+		.radius(6px);
+	}
+	&.alert {
+		border-left-color: #F1C40F;
+		&:before {background-color: #F1C40F;}
+	}
+	&.success {
+		border-left-color: #2ECC71;
+		&:before {background-color: #2ECC71;}
+	}
+	&.error {
+		border-left-color: #E74C3C;
+		&:before {background-color: #E74C3C;}
+	}
+	&.info {
+		border-left-color: #3498DB;
+		&:before {background-color: #3498DB;}
+	}
 }
 
 
@@ -131,7 +247,50 @@ p {
 	float:right;
 	border-left:1px solid #ccc;
 	padding:15px;
-	background-color: #f8f8f8;
+	background-color: #f9f9f9;
+}
+.entry-content table {
+	text-align:left;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom:3em;
+	thead {
+		background-color: #2980B9;
+		color:#fff;
+		td, th {
+			padding:10px 20px;
+			font-size:1.4em;
+			font-weight: 200;
+		}
+	}
+	tbody {
+		background-color: #f9f9f9;
+		tr {
+			.transition(background-color, .3s, linear);
+			border-bottom:1px solid #e7e7e7;
+			&:hover {background-color: #fff;}
+		}
+		td, th {
+			padding:15px 20px;
+			font-size:1.4em;
+			font-weight: 200;
+		}
+	}
+}
+
+/////
+//gallery
+/////
+.gallery {
+	margin-bottom:3em;
+	.gallery-item {
+		display: inline-block;
+		margin: 20px;
+		overflow:hidden;
+		width: 150px;
+		height:150px;
+		.radius(50%);
+	}
 }
 
 
@@ -317,8 +476,3 @@ input[type="color"].error {
 	font-size: 1.3em;
 	margin: -1em .5em 1em;
 }
-
-
-
-
-

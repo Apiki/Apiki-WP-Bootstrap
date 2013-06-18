@@ -9,7 +9,6 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -18,16 +17,33 @@ figure,
 footer,
 header,
 hgroup,
-menu,
 nav,
 section {
   display: block;
+}
+.formee:after,
+.formee hgroup:after,
+.formee nav:after,
+.formee footer:after,
+.formee header:after,
+.formee section:after,
+.formee div:after,
+.formee ol:after,
+.formee ul:after,
+.formee li:after,
+.formee dl:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 html {
   font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a {
-  color: #ff675b;
+  color: #e74c3c;
 }
 h1,
 h2,
@@ -44,11 +60,11 @@ h6 {
 h1,
 .entry-title,
 .entry-title a {
-  color: #3083a7;
+  color: #2980b9;
 }
 h2,
 #respond h3 {
-  color: #26ae90;
+  color: #2980b9;
   font-size: 3em;
 }
 h3 {
@@ -101,6 +117,150 @@ p {
 .entry-content ol > li {
   list-style: inside decimal;
 }
+.entry-content address {
+  color: #777777;
+  font: normal normal 1.4em/1.4em georgia;
+  margin-bottom: 2em;
+}
+.entry-content address strong {
+  color: #2b2b2b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn,
+input[type=submit],
+input[type=reset] {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 1.6em;
+  background-color: #bdc3c7;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+.btn:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+.btn:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+  background-color: #cacfd2;
+}
+.btn.btn-small,
+input[type=submit].btn-small,
+input[type=reset].btn-small {
+  font-size: 1.4em;
+  padding: 10px 30px;
+}
+.btn.btn-full,
+input[type=submit].btn-full,
+input[type=reset].btn-full {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.btn.btn-primary,
+input[type=submit].btn-primary,
+input[type=reset].btn-primary {
+  background-color: #1abc9c;
+}
+.btn.btn-primary:focus,
+input[type=submit].btn-primary:focus,
+input[type=reset].btn-primary:focus,
+.btn.btn-primary:hover,
+input[type=submit].btn-primary:hover,
+input[type=reset].btn-primary:hover {
+  background-color: #48c9b0;
+}
+.btn.btn-secondary,
+input[type=submit].btn-secondary,
+input[type=reset].btn-secondary {
+  background-color: #2980B9;
+}
+.btn.btn-secondary:focus,
+input[type=submit].btn-secondary:focus,
+input[type=reset].btn-secondary:focus,
+.btn.btn-secondary:hover,
+input[type=submit].btn-secondary:hover,
+input[type=reset].btn-secondary:hover {
+  background-color: #3498DB;
+}
+.btn.btn-danger,
+input[type=submit].btn-danger,
+input[type=reset].btn-danger,
+.btn input[type=reset],
+input[type=submit] input[type=reset],
+input[type=reset] input[type=reset] {
+  background-color: #e74c3c;
+}
+.btn.btn-danger:focus,
+input[type=submit].btn-danger:focus,
+input[type=reset].btn-danger:focus,
+.btn input[type=reset]:focus,
+input[type=submit] input[type=reset]:focus,
+input[type=reset] input[type=reset]:focus,
+.btn.btn-danger:hover,
+input[type=submit].btn-danger:hover,
+input[type=reset].btn-danger:hover,
+.btn input[type=reset]:hover,
+input[type=submit] input[type=reset]:hover,
+input[type=reset] input[type=reset]:hover {
+  background-color: #ec7063;
+}
+input[type=submit] {
+  background-color: #1abc9c;
+}
+input[type=submit]:focus,
+input[type=submit]:hover {
+  background-color: #48c9b0;
+}
+.msg {
+  padding: 15px 20px;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-left: 4px solid #F1C40F;
+  color: #777777;
+}
+.msg:before {
+  content: "";
+  display: inline-block;
+  margin-left: -27px;
+  margin-right: 9px;
+  height: 10px;
+  width: 10px;
+  background-color: #F1C40F;
+  border-radius: 6px;
+}
+.msg.alert {
+  border-left-color: #F1C40F;
+}
+.msg.alert:before {
+  background-color: #F1C40F;
+}
+.msg.success {
+  border-left-color: #2ECC71;
+}
+.msg.success:before {
+  background-color: #2ECC71;
+}
+.msg.error {
+  border-left-color: #E74C3C;
+}
+.msg.error:before {
+  background-color: #E74C3C;
+}
+.msg.info {
+  border-left-color: #3498DB;
+}
+.msg.info:before {
+  background-color: #3498DB;
+}
 .entry-header {
   position: relative;
 }
@@ -125,7 +285,7 @@ p {
   border-bottom: 1px solid #ccc;
 }
 .entry-meta a {
-  color: #ff675b;
+  color: #e74c3c;
 }
 .entry-date,
 .leave-meta-reply,
@@ -142,7 +302,54 @@ p {
   float: right;
   border-left: 1px solid #ccc;
   padding: 15px;
-  background-color: #f8f8f8;
+  background-color: #f9f9f9;
+}
+.entry-content table {
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3em;
+}
+.entry-content table thead {
+  background-color: #2980B9;
+  color: #fff;
+}
+.entry-content table thead td,
+.entry-content table thead th {
+  padding: 10px 20px;
+  font-size: 1.4em;
+  font-weight: 200;
+}
+.entry-content table tbody {
+  background-color: #f9f9f9;
+}
+.entry-content table tbody tr {
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  border-bottom: 1px solid #e7e7e7;
+}
+.entry-content table tbody tr:hover {
+  background-color: #fff;
+}
+.entry-content table tbody td,
+.entry-content table tbody th {
+  padding: 15px 20px;
+  font-size: 1.4em;
+  font-weight: 200;
+}
+.gallery {
+  margin-bottom: 3em;
+}
+.gallery .gallery-item {
+  display: inline-block;
+  margin: 20px;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 #respond {
   margin: 5em 0;
@@ -183,7 +390,7 @@ p {
   right: 0;
   top: 50px;
   font-size: 1.3em;
-  color: #ff675b;
+  color: #e74c3c;
 }
 .comment-author {
   float: left;
@@ -297,10 +504,6 @@ input[type="color"].error {
 .form-allowed-tags {
   font-size: 1.3em;
   margin: -1em 0.5em 1em;
-}
-.container {
-  width: 1024px;
-  margin: 0 auto;
 }
 .box {
   border: 1px solid #ddd;
