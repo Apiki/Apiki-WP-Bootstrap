@@ -1,0 +1,136 @@
+/////
+// reset
+/////
+* {
+  padding:0;
+  margin:0;
+  border:0;
+  text-decoration: none;
+  outline: none;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+/////
+// colors
+/////
+@text-normal: #777;
+@text-em: #2b2b2b;
+@text-primary: #db6b20;
+@link: #ff675b;
+@text-disable: #e7e7e7;
+@entry-title: #3083a7;
+
+/////
+// Tipografia
+/////
+html {
+	font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/////
+//elements
+/////
+a {
+	color:@link;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 4.2em;
+	font-weight: 200;
+	line-height:1.2em;
+	color:@text-em;
+	margin-bottom:.4em;
+}
+h1, .entry-title, .entry-title a {color: @entry-title;}
+h2 {
+	color:#26ae90;
+	font-size:3em;
+}
+h3 {font-size:2.4em;}
+h4 {
+	font-size:1.8em;
+	font-weight: 500;
+	margin-bottom: 1.2em;
+}
+h5 {
+	font-size: 1.6em;
+	line-height: 2em;
+	font-weight: 500;
+	margin-bottom: 1.2em;
+}
+h6 {
+	font-size: 1.4em;
+	line-height: 2em;
+	font-weight: 500;
+	margin-bottom: 1.2em;
+}
+p {
+	font-size: 1.6em;
+	line-height: 2em;
+	margin-bottom: 1.2em;
+	color: @text-normal;
+	font-weight: 300;
+}
+.entry-content {
+	ul, ol {
+		font-size: 1.6em;
+		line-height: 1.6em;
+		margin-bottom: 1.2em;
+		color: @text-normal;
+		font-weight: 300;
+		li {
+			list-style: inside disc;
+			margin-bottom: .8em;
+			ul, ol {
+				margin: .5em 0 0 1.2em;
+				font-size:1em;
+			}
+		}
+	}
+	ol > li {list-style:inside decimal;}
+}
+
+
+/////
+//post
+/////
+.entry-header {
+	position:relative;
+	.entry-title {margin-right:150px;}
+}
+.comments-link {
+	position:absolute;
+	top:25px;
+	right:0;
+	margin: -.4em 0 1em;
+	font-size:2em;
+	font-weight: 100;
+	a {
+		color:#ddd;
+	}
+}
+.entry-meta {
+	font-size: 1.4em;
+	color: @text-normal;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	a {color: @link;}
+}
+.entry-date, .leave-meta-reply, .category-meta-link, .by-author, .edit-link {
+	display: inline-block;
+	padding:15px 0;
+}
+.by-author {display:none;}
+.edit-link {
+	float:right;
+	border-left:1px solid #ccc;
+	padding:15px;
+	background-color: #f8f8f8;
+}
+
