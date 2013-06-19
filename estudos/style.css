@@ -415,6 +415,37 @@ input[type=submit]:hover {
   color: #777777;
   display: block;
 }
+.widget li {
+  list-style: square inside none;
+  color: #777777;
+  font-size: 1.4em;
+  line-height: 25px;
+  margin-bottom: .2em;
+}
+.widget li ul {
+  margin: 0 0 0 1em;
+}
+.widget li ul li {
+  font-size: 1.4rem;
+}
+.tagcloud a {
+  list-style-type: none;
+  display: inline-block;
+  padding: .8em;
+  margin: 2px 5px;
+  background-color: #F9F9F9;
+  font-size: 1.2rem !important;
+  color: #777777;
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.tagcloud a:hover {
+  background-color: #2980b9;
+  color: #FFF;
+}
 form {
   background: #f2f2f2;
   font-size: 1.2em;
@@ -460,6 +491,12 @@ input[type="color"] {
   -o-transition: border .25s linear, color .25s linear;
   transition: border .25s linear, color .25s linear;
   -webkit-backface-visibility: hidden;
+}
+select {
+  padding: 10px;
+  height: 30px;
+  display: block;
+  font-size: 1.4em;
 }
 textarea {
   height: 160px;

@@ -376,6 +376,46 @@ input[type=submit] {
 }
 
 /////
+//Widgets
+/////
+.widget {
+	li {
+		list-style: square inside none;
+		color: @text-normal;
+		font-size: 1.4em;
+		line-height: 25px;
+		margin-bottom: .2em;
+
+		ul {
+			margin: 0 0 0 1em;
+
+			li {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+
+.tagcloud {
+	a {
+		list-style-type: none;
+		display: inline-block;
+		padding: .8em;
+		margin: 2px 5px;
+		background-color: #F9F9F9;
+		font-size: 1.2rem !important;
+		color: @text-normal;
+		.transition(background-color, .3s, ease-in);
+
+		&:hover {
+			background-color: #2980b9;
+			color: #FFF;
+		}
+	}
+}
+
+/////
 //Form
 /////
 
@@ -426,6 +466,14 @@ input[type="color"] {
 	-o-transition: border .25s linear, color .25s linear;
 	transition: border .25s linear, color .25s linear;
 	-webkit-backface-visibility: hidden;
+}
+
+
+select {
+	padding: 10px;
+	height: 30px;
+	display: block;
+	font-size: 1.4em;
 }
 
 textarea {
