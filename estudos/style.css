@@ -674,6 +674,111 @@ input[type="color"].error {
   font-size: 1.3em;
   margin: -1em 0.5em 1em;
 }
+/* header */
+#branding {
+  position: relative;
+  overflow: hidden;
+  background-color: #e74c3c;
+  padding: 20px 50px;
+}
+#branding hgroup {
+  border-radius: 2px;
+}
+#branding hgroup h1,
+#branding hgroup h1 a,
+#site-title a {
+  display: inline-block;
+  position: relative !important;
+  z-index: 2;
+  color: #fff;
+  font-weight: 700;
+}
+#branding hgroup h2,
+#site-description {
+  position: relative !important;
+  z-index: 2;
+  text-align: center;
+  font-size: 5em;
+  color: #fff;
+  font-weight: 100;
+  padding: 0 15%;
+  margin: 4% 0;
+}
+#branding > a {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: -50px;
+}
+#branding > a img {
+  /*	width: 100%;
+	height: auto;*/
+
+}
+#branding #searchform {
+  display: none;
+}
+#branding #access {
+  overflow: hidden;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+}
+#access .assistive-text,
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 0;
+  height: 0;
+  display: block;
+  overflow: hidden;
+  font-size: 1px;
+}
+#access .menu {
+  text-align: right;
+}
+.menu li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.menu a {
+  font-size: 1.6em;
+  line-height: 1em;
+  color: #fff;
+}
+/* content */
+#main {
+  position: relative;
+  padding: 50px 50px 100px;
+  background-color: #f9f9f9;
+}
+#primary {
+  float: left;
+  width: 75%;
+  padding-right: 50px;
+}
+#secondary {
+  float: right;
+  width: 25%;
+}
+/* footer */
+#colophon {
+  clear: both;
+  position: relative;
+  background-color: #2b2b2b;
+  padding: 20px 50px;
+}
+#site-generator {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  color: #ddd;
+}
+#site-generator a {
+  color: #e7e7e7;
+}
 .box {
   border: 1px solid #ddd;
   padding: 15px;
