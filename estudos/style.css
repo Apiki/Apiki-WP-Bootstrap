@@ -1,3 +1,15 @@
+/*
+Theme Name: Twenty Eleven
+Theme URI: http://wordpress.org/extend/themes/twentyeleven
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentyeleven
+*/
 * {
   padding: 0;
   margin: 0;
@@ -21,17 +33,17 @@ nav,
 section {
   display: block;
 }
-.formee:after,
-.formee hgroup:after,
-.formee nav:after,
-.formee footer:after,
-.formee header:after,
-.formee section:after,
-.formee div:after,
-.formee ol:after,
-.formee ul:after,
-.formee li:after,
-.formee dl:after {
+after,
+hgroup:after,
+nav:after,
+footer:after,
+header:after,
+section:after,
+div:after,
+ol:after,
+ul:after,
+li:after,
+dl:after {
   content: ".";
   display: block;
   clear: both;
@@ -40,6 +52,7 @@ section {
   overflow: hidden;
 }
 html {
+  background-color: #f9f9f9;
   font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a {
@@ -73,7 +86,7 @@ h3 {
 h4 {
   font-size: 1.8em;
   font-weight: 500;
-  margin-bottom: 1.2em;
+  margin-bottom: .6em;
 }
 h5 {
   font-size: 1.6em;
@@ -129,6 +142,7 @@ p {
 .btn,
 input[type=submit],
 input[type=reset] {
+  text-transform: lowercase;
   display: inline-block;
   padding: 15px 40px;
   border-radius: 2px;
@@ -261,6 +275,9 @@ input[type=submit]:hover {
 .msg.info:before {
   background-color: #3498DB;
 }
+.post {
+  position: relative;
+}
 .entry-header {
   position: relative;
 }
@@ -272,8 +289,9 @@ input[type=submit]:hover {
   top: 25px;
   right: 0;
   margin: -0.4em 0 1em;
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: 100;
+  text-transform: lowercase;
 }
 .comments-link a {
   color: #ddd;
@@ -294,6 +312,7 @@ input[type=submit]:hover {
 .edit-link {
   display: inline-block;
   padding: 15px 0;
+  text-transform: lowercase;
 }
 .by-author {
   display: none;
@@ -303,6 +322,7 @@ input[type=submit]:hover {
   border-left: 1px solid #ccc;
   padding: 15px;
   background-color: #f9f9f9;
+  text-transform: lowercase;
 }
 .entry-content .alignleft {
   float: left;
@@ -502,18 +522,98 @@ input[type=submit]:hover {
   color: #777777;
   display: block;
 }
+.widget {
+  padding: 10px 0 20px;
+  border-bottom: 1px dashed #bdc3c7;
+  margin-bottom: 20px;
+}
+.widget:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+.widget .widget-title {
+  font-size: 2em;
+  font-weight: 200;
+  text-transform: lowercase;
+}
 .widget li {
-  list-style: square inside none;
-  color: #777777;
-  font-size: 1.6em;
-  line-height: 25px;
-  margin-bottom: .2em;
+  list-style: inside none;
+  font-size: 1.4rem;
+  margin-bottom: .5em;
 }
-.widget li ul {
-  margin: 0 0 0 1em;
+.widget a {
+  color: #7f8c8d;
 }
-.widget li ul li {
-  font-size: 1.6rem;
+.widget a:hover,
+.widget a:focus {
+  text-decoration: underline;
+}
+#secondary #searchform {
+  text-align: center;
+}
+#secondary #searchform .field {
+  float: left;
+  width: 60%;
+  margin: 0;
+}
+#secondary #searchform .submit {
+  display: inline-block;
+  margin: 0;
+  width: 40%;
+  margin-left: -1%;
+}
+#secondary .submit {
+  font-size: 1.4em;
+  padding: 10px 20px;
+}
+.widget_archive li {
+  list-style: inside none;
+}
+.widget_archive li a {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  color: #ecf0f1;
+  background-color: #bdc3c7;
+  padding: 5px 10px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+.widget_archive li a:focus,
+.widget_archive li a:hover {
+  background-color: #d2d8dc;
+  text-decoration: none;
+}
+.widget_categories > ul {
+  margin-left: -5px;
+}
+.widget_categories .cat-item {
+  float: left;
+  margin: 0 0 5px 5px;
+  list-style: inside none;
+}
+.widget_categories .cat-item a {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  color: #ecf0f1;
+  background-color: #bdc3c7;
+  padding: 5px 10px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+.widget_categories .cat-item a:focus,
+.widget_categories .cat-item a:hover {
+  background-color: #d2d8dc;
+  text-decoration: none;
 }
 .tagcloud a {
   list-style-type: none;
@@ -578,17 +678,6 @@ input[type=submit]:hover {
 .blogroll a {
   display: block;
 }
-form {
-  background: #f2f2f2;
-  font-size: 1.2em;
-  padding: 2em;
-}
-label {
-  font-size: 1.6em;
-  margin-bottom: .6em;
-  display: block;
-  color: #777;
-}
 textarea,
 input[type="text"],
 input[type="password"],
@@ -608,20 +697,17 @@ input[type="color"] {
   display: block;
   border: 1px solid #BDC3C7;
   color: #777777;
-  font-width: normal;
-  padding: 0 .5em;
+  padding: 0 10px;
   margin: 0 0 1em 0;
-  height: 40px;
-  font-size: 1.3em;
+  height: 37px;
+  font-size: 1.4em;
+  border-radius: 2px;
+  -webkit-transition: border 0.3s linear;
+  -moz-transition: border 0.3s linear;
+  -o-transition: border 0.3s linear;
+  -ms-transition: border 0.3s linear;
+  transition: border 0.3s linear;
   -webkit-appearance: none;
-  border-radius: 6px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: border .25s linear, color .25s linear;
-  -moz-transition: border .25s linear, color .25s linear;
-  -o-transition: border .25s linear, color .25s linear;
-  transition: border .25s linear, color .25s linear;
   -webkit-backface-visibility: hidden;
 }
 select {
@@ -649,9 +735,6 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus {
   border-color: #1ABC9C;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 textarea.error,
 input[type="text"].error,
@@ -686,15 +769,16 @@ input[type="color"].error {
 }
 #branding hgroup h1,
 #branding hgroup h1 a,
-#site-title a {
+#branding #site-title a {
   display: inline-block;
   position: relative !important;
   z-index: 2;
   color: #fff;
   font-weight: 700;
+  text-transform: lowercase;
 }
 #branding hgroup h2,
-#site-description {
+#branding #site-description {
   position: relative !important;
   z-index: 2;
   text-align: center;
@@ -703,6 +787,7 @@ input[type="color"].error {
   font-weight: 100;
   padding: 0 15%;
   margin: 4% 0;
+  text-transform: lowercase;
 }
 #branding > a {
   position: relative;
@@ -711,11 +796,6 @@ input[type="color"].error {
   display: block;
   text-align: center;
   margin-bottom: -50px;
-}
-#branding > a img {
-  /*	width: 100%;
-	height: auto;*/
-
 }
 #branding #searchform {
   display: none;
@@ -726,7 +806,7 @@ input[type="color"].error {
   right: 50px;
   top: 20px;
 }
-#access .assistive-text,
+.assistive-text,
 .skip-link {
   position: absolute;
   top: -1000px;
@@ -740,14 +820,15 @@ input[type="color"].error {
 #access .menu {
   text-align: right;
 }
-.menu li {
+#access .menu li {
   display: inline-block;
   margin-left: 10px;
 }
-.menu a {
+#access .menu a {
   font-size: 1.6em;
   line-height: 1em;
   color: #fff;
+  text-transform: lowercase;
 }
 /* content */
 #main {
@@ -763,6 +844,9 @@ input[type="color"].error {
 #secondary {
   float: right;
   width: 25%;
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 4px;
 }
 /* footer */
 #colophon {
@@ -771,12 +855,13 @@ input[type="color"].error {
   background-color: #2b2b2b;
   padding: 20px 50px;
 }
-#site-generator {
+#colophon #site-generator {
+  text-transform: lowercase;
   font-size: 1.4em;
   line-height: 1.2em;
   color: #ddd;
 }
-#site-generator a {
+#colophon #site-generator a {
   color: #e7e7e7;
 }
 .box {
