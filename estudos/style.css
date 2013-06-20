@@ -505,7 +505,7 @@ input[type=submit]:hover {
 .widget li {
   list-style: square inside none;
   color: #777777;
-  font-size: 1.4em;
+  font-size: 1.6em;
   line-height: 25px;
   margin-bottom: .2em;
 }
@@ -513,7 +513,7 @@ input[type=submit]:hover {
   margin: 0 0 0 1em;
 }
 .widget li ul li {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .tagcloud a {
   list-style-type: none;
@@ -532,6 +532,45 @@ input[type=submit]:hover {
 .tagcloud a:hover {
   background-color: #2980b9;
   color: #FFF;
+}
+#wp-calendar {
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 3em;
+}
+#wp-calendar caption {
+  font-size: 1.6em;
+  margin: 0 0 1em 0;
+}
+#wp-calendar thead {
+  background-color: #2980B9;
+  color: #fff;
+}
+#wp-calendar thead td,
+#wp-calendar thead th {
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+#wp-calendar tbody td,
+#wp-calendar tbody th {
+  background-color: #f9f9f9;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 200;
+  border: 1px solid #ddd;
+}
+#wp-calendar tbody td:hover,
+#wp-calendar tbody th:hover {
+  background-color: #fff;
+}
+#wp-calendar tbody .pad {
+  background: transparent;
 }
 form {
   background: #f2f2f2;

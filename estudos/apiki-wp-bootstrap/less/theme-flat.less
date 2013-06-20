@@ -268,7 +268,7 @@ input[type=submit] {
 	//image
 	img {border:1px solid #777;}
 	//table
-	table {
+	table{
 		text-align:left;
 		width: 100%;
 		border-collapse: collapse;
@@ -467,7 +467,7 @@ input[type=submit] {
 	li {
 		list-style: square inside none;
 		color: @text-normal;
-		font-size: 1.4em;
+		font-size: 1.6em;
 		line-height: 25px;
 		margin-bottom: .2em;
 
@@ -475,7 +475,7 @@ input[type=submit] {
 			margin: 0 0 0 1em;
 
 			li {
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 			}
 		}
 	}
@@ -498,6 +498,54 @@ input[type=submit] {
 			color: #FFF;
 		}
 	}
+}
+
+/////
+//Form
+/////
+#wp-calendar {
+		text-align: center;
+		// width: 100%;
+		border-collapse: collapse;
+		margin-bottom:3em;
+
+		caption {
+			font-size: 1.6em;
+			margin: 0 0 1em 0;
+		}
+
+		thead {
+			background-color: #2980B9;
+			color:#fff;
+
+			td, th {
+				padding:15px;
+				font-size:1.2em;
+				font-weight: 200;
+			}
+
+		}
+
+		tbody {
+
+			td, th {
+				background-color: #f9f9f9;
+				.transition(background-color, .3s, linear);
+				padding:10px;
+				font-size:1.2em;
+				font-weight: 200;
+				border: 1px solid #ddd;
+
+				&:hover {
+					background-color: #fff;
+				}
+			}
+
+			.pad {
+				background: transparent;
+			}
+
+		}
 }
 
 /////
@@ -552,7 +600,6 @@ input[type="color"] {
 	transition: border .25s linear, color .25s linear;
 	-webkit-backface-visibility: hidden;
 }
-
 
 select {
 	padding: 10px;
