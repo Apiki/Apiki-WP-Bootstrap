@@ -572,6 +572,12 @@ input[type=submit]:hover {
 #wp-calendar tbody .pad {
   background: transparent;
 }
+.blogroll img {
+  display: none;
+}
+.blogroll a {
+  display: block;
+}
 form {
   background: #f2f2f2;
   font-size: 1.2em;
