@@ -1,3 +1,15 @@
+/*
+Theme Name: Twenty Eleven
+Theme URI: http://wordpress.org/extend/themes/twentyeleven
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentyeleven
+*/
 * {
   padding: 0;
   margin: 0;
@@ -21,17 +33,17 @@ nav,
 section {
   display: block;
 }
-.formee:after,
-.formee hgroup:after,
-.formee nav:after,
-.formee footer:after,
-.formee header:after,
-.formee section:after,
-.formee div:after,
-.formee ol:after,
-.formee ul:after,
-.formee li:after,
-.formee dl:after {
+after,
+hgroup:after,
+nav:after,
+footer:after,
+header:after,
+section:after,
+div:after,
+ol:after,
+ul:after,
+li:after,
+dl:after {
   content: ".";
   display: block;
   clear: both;
@@ -40,6 +52,7 @@ section {
   overflow: hidden;
 }
 html {
+  background-color: #f9f9f9;
   font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a {
@@ -73,7 +86,7 @@ h3 {
 h4 {
   font-size: 1.8em;
   font-weight: 500;
-  margin-bottom: 1.2em;
+  margin-bottom: .6em;
 }
 h5 {
   font-size: 1.6em;
@@ -260,6 +273,9 @@ input[type=submit]:hover {
 }
 .msg.info:before {
   background-color: #3498DB;
+}
+.post {
+  position: relative;
 }
 .entry-header {
   position: relative;
@@ -502,6 +518,15 @@ input[type=submit]:hover {
   color: #777777;
   display: block;
 }
+.widget {
+  padding: 20px 0;
+  border-bottom: 1px dashed #e7e7e7;
+  margin-bottom: 20px;
+}
+.widget:last-child {
+  border: none;
+  padding-bottom: 0;
+}
 .widget li {
   list-style: square inside none;
   color: #777777;
@@ -686,7 +711,7 @@ input[type="color"].error {
 }
 #branding hgroup h1,
 #branding hgroup h1 a,
-#site-title a {
+#branding #site-title a {
   display: inline-block;
   position: relative !important;
   z-index: 2;
@@ -694,7 +719,7 @@ input[type="color"].error {
   font-weight: 700;
 }
 #branding hgroup h2,
-#site-description {
+#branding #site-description {
   position: relative !important;
   z-index: 2;
   text-align: center;
@@ -711,11 +736,6 @@ input[type="color"].error {
   display: block;
   text-align: center;
   margin-bottom: -50px;
-}
-#branding > a img {
-  /*	width: 100%;
-	height: auto;*/
-
 }
 #branding #searchform {
   display: none;
@@ -740,11 +760,11 @@ input[type="color"].error {
 #access .menu {
   text-align: right;
 }
-.menu li {
+#access .menu li {
   display: inline-block;
   margin-left: 10px;
 }
-.menu a {
+#access .menu a {
   font-size: 1.6em;
   line-height: 1em;
   color: #fff;
@@ -763,6 +783,9 @@ input[type="color"].error {
 #secondary {
   float: right;
   width: 25%;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
 }
 /* footer */
 #colophon {
@@ -771,12 +794,12 @@ input[type="color"].error {
   background-color: #2b2b2b;
   padding: 20px 50px;
 }
-#site-generator {
+#colophon #site-generator {
   font-size: 1.4em;
   line-height: 1.2em;
   color: #ddd;
 }
-#site-generator a {
+#colophon #site-generator a {
   color: #e7e7e7;
 }
 .box {
