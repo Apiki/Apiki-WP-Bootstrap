@@ -232,6 +232,7 @@ input[type=submit] {
 	font-size:1.4em;
 	font-weight: 100;
 	text-transform: lowercase;
+	border-right: none !important;
 	a {
 		color:#ddd;
 	}
@@ -241,13 +242,47 @@ input[type=submit] {
 	color: @text-normal;
 	border-top:1px solid #ccc;
 	border-bottom:1px solid #ccc;
-	a {color: @link;}
+
+	a {
+		color: @link;
+	}
+
+	span {
+		padding: .4em .1em;
+		display: inline-block;
+		border-right: 1px solid #ccc;
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	.sep {
+		border: none;
+	}
+
+	.entry-utility-prep {
+		border: none;
+	}
 }
+
+
+footer.entry-meta {
+	.sep {
+		display: none;
+	}
+
+	span {
+		padding-right: .5em;
+	}
+}
+
 .entry-date, .leave-meta-reply, .category-meta-link, .by-author, .edit-link {
 	display: inline-block;
 	padding:15px 0;
 	text-transform: lowercase;
 }
+
 .by-author {display:none;}
 .edit-link {
 	float:right;
@@ -389,81 +424,98 @@ input[type=submit] {
 /////
 //Comentários
 /////
-#respond {
-	margin: 5em 0;
+#comments {
+	#respond {
+		margin: 5em 0;
 
-	h3 {
-		margin-bottom: 1em;
-	}
-
-	input[type="text"] {
-		font-size: 1.1em;
-	}
-
-	label {
-		font-size: .9em;
-		margin-bottom: 0em;
-	}
-}
-
-.comment {
-	padding: 0 0 1em 0;
-}
-
-.comment-content {
-	margin: -20px 0 0 95px;
-	float: left;
-	width: 100%;
-}
-
-.commentlist {
-	list-style: none;
-
-	li {
-		float: left;
-		width: 100%;
-		padding: 3em 0;
-		position: relative;
-		border-bottom: 1px solid #ccc;
-
-		&:last-child {
-			border: none;
+		h3 {
+			margin-bottom: 1em;
 		}
 
-		.reply {
-			position: absolute;
-			right: 0;
-			top: 50px;
-			font-size: 1.3em;
-			color: @link;
+		input[type="text"] {
+			font-size: 1.1em;
+		}
+
+		label {
+			font-size: .9em;
+			margin-bottom: 0em;
 		}
 	}
-}
 
-.comment-author {
-	float: left;
-	margin-right: 20px;
-	width: 100%;
-
-	a {
-		display: none;
+	.comment {
+		padding: 0 0 1em 0;
 	}
 
-	.avatar {
-		width: 64px;
-		height: 64px;
+	.comment-content {
+		margin: -20px 0 0 95px;
 		float: left;
-		margin: 0 30px 0 0;
+		width: 85%;
 	}
 
-	.fn {
-		float: left;
-		margin: 1em 0;
+	.commentlist {
+		list-style: none;
 		font-size: 1.6em;
-		a {
-			color: @text-normal;
-			display: block;
+
+		li {
+			float: left;
+			width: 100%;
+			padding: 3em 0;
+			position: relative;
+			border-bottom: 1px solid #ccc;
+
+			&:last-child {
+				border: none;
+			}
+
+			.reply {
+				position: absolute;
+				right: 0;
+				top: 50px;
+				font-size: 1.3em;
+				color: @link;
+			}
 		}
+	}
+
+	.comment-author {
+		float: left;
+		margin-right: 20px;
+		width: 100%;
+
+		a {
+			display: none;
+		}
+
+		.avatar {
+			width: 64px;
+			height: 64px;
+			float: left;
+			margin: 0 30px 0 0;
+		}
+
+		.fn {
+			// float: left;
+			margin: 1em 0;
+			// font-size: 1.6em;
+			a {
+				color: @text-normal;
+				// display: block;
+			}
+		}
+	}
+
+	#commentform {
+		background: #ECF0F1;
+		padding: 20px;
+		border-radius: 4px;
+
+		.form-allowed-tags {
+			display: none;
+		}
+	}
+
+	.children {
+		margin-left: 10em;
 	}
 }
 
@@ -583,6 +635,7 @@ input[type=submit] {
 		&:hover {
 			background-color: #2980b9;
 			color: #FFF;
+			text-decoration: none;
 		}
 	}
 }
@@ -590,7 +643,7 @@ input[type=submit] {
 
 #wp-calendar {
 		text-align: center;
-		// width: 100%;
+		width: 100%;
 		border-collapse: collapse;
 		margin-bottom:3em;
 
@@ -835,11 +888,29 @@ input[type="color"].error {
 	position: relative;
 	background-color: #2b2b2b;
 	padding: 20px 50px;
+
+	.widget {
+		width: 28%;
+		float: left;
+		margin-left: 5%;
+		border-right: 1px dashed #FFF;
+		border-bottom: none;
+
+		.widget-title {
+			color: #FFF;
+		}
+	}
+
 	#site-generator {
 		text-transform: lowercase;
-		font-size:1.4em;
+		font-size:1.1em;
 		line-height:1.2em;
 		color:#ddd;
-		a {color:#e7e7e7;}
+		text-align: center;
+		padding: 2em 0;
+
+		a {
+			color:#7f8c8d;
+		}
 	}
 }

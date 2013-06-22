@@ -305,6 +305,26 @@ input[type=submit]:hover {
 .entry-meta a {
   color: #e74c3c;
 }
+.entry-meta span {
+  padding: .4em .1em;
+  display: inline-block;
+  border-right: 1px solid #ccc;
+}
+.entry-meta span:last-child {
+  border: none;
+}
+.entry-meta .sep {
+  border: none;
+}
+.entry-meta .entry-utility-prep {
+  border: none;
+}
+footer.entry-meta .sep {
+  display: none;
+}
+footer.entry-meta span {
+  padding-right: .5em;
+}
 .entry-date,
 .leave-meta-reply,
 .category-meta-link,
@@ -458,69 +478,78 @@ input[type=submit]:hover {
 .gallery .gallery-item:hover a:before {
   box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.3), inset 0 0 0 10px rgba(255, 255, 255, 0.4), inset 0 0 0 20px rgba(255, 255, 255, 0.2), inset 0 0 0 30px rgba(255, 255, 255, 0.1);
 }
-#respond {
+#comments #respond {
   margin: 5em 0;
 }
-#respond h3 {
+#comments #respond h3 {
   margin-bottom: 1em;
 }
-#respond input[type="text"] {
+#comments #respond input[type="text"] {
   font-size: 1.1em;
 }
-#respond label {
+#comments #respond label {
   font-size: .9em;
   margin-bottom: 0em;
 }
-.comment {
+#comments .comment {
   padding: 0 0 1em 0;
 }
-.comment-content {
+#comments .comment-content {
   margin: -20px 0 0 95px;
   float: left;
-  width: 100%;
+  width: 85%;
 }
-.commentlist {
+#comments .commentlist {
   list-style: none;
+  font-size: 1.6em;
 }
-.commentlist li {
+#comments .commentlist li {
   float: left;
   width: 100%;
   padding: 3em 0;
   position: relative;
   border-bottom: 1px solid #ccc;
 }
-.commentlist li:last-child {
+#comments .commentlist li:last-child {
   border: none;
 }
-.commentlist li .reply {
+#comments .commentlist li .reply {
   position: absolute;
   right: 0;
   top: 50px;
   font-size: 1.3em;
   color: #e74c3c;
 }
-.comment-author {
+#comments .comment-author {
   float: left;
   margin-right: 20px;
   width: 100%;
 }
-.comment-author a {
+#comments .comment-author a {
   display: none;
 }
-.comment-author .avatar {
+#comments .comment-author .avatar {
   width: 64px;
   height: 64px;
   float: left;
   margin: 0 30px 0 0;
 }
-.comment-author .fn {
-  float: left;
+#comments .comment-author .fn {
   margin: 1em 0;
-  font-size: 1.6em;
 }
-.comment-author .fn a {
+#comments .comment-author .fn a {
   color: #777777;
-  display: block;
+}
+#comments #commentform {
+  background: #ECF0F1;
+  padding: 20px;
+  border-radius: 4px;
+}
+#comments #commentform .form-allowed-tags {
+  display: none;
+}
+#comments .children {
+  margin-left: 10em;
 }
 .widget {
   padding: 10px 0 20px;
@@ -632,9 +661,11 @@ input[type=submit]:hover {
 .tagcloud a:hover {
   background-color: #2980b9;
   color: #FFF;
+  text-decoration: none;
 }
 #wp-calendar {
   text-align: center;
+  width: 100%;
   border-collapse: collapse;
   margin-bottom: 3em;
 }
