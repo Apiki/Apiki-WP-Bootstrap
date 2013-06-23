@@ -886,18 +886,36 @@ input[type="color"].error {
 #colophon {
 	clear:both;
 	position: relative;
-	background-color: #2b2b2b;
-	padding: 20px 50px;
+	background-color: #34495e;
+	padding: 20px 50px; 
 
 	.widget {
-		width: 28%;
+		width: 33%;
+		min-height: 300px;
 		float: left;
-		margin-left: 5%;
+		padding: 0 5%;
 		border-right: 1px dashed #FFF;
 		border-bottom: none;
 
 		.widget-title {
 			color: #FFF;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 1.3em;
+		}
+
+		#wp-calendar thead {
+			background-color: #2C3E50;
+		}
+
+		#wp-calendar {
+			tbody {
+				td {
+					background-color: #263d53;
+					color: #FFF;
+					border-color: #3c4c5c;
+				}
+			}
 		}
 	}
 

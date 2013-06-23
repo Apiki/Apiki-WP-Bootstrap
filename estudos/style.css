@@ -292,6 +292,7 @@ input[type=submit]:hover {
   font-size: 1.4em;
   font-weight: 100;
   text-transform: lowercase;
+  border-right: none !important;
 }
 .comments-link a {
   color: #ddd;
@@ -883,17 +884,29 @@ input[type="color"].error {
 #colophon {
   clear: both;
   position: relative;
-  background-color: #2b2b2b;
+  background-color: #34495e;
   padding: 20px 50px;
+}
+#colophon .widget {
+  width: 28%;
+  float: left;
+  margin-left: 5%;
+  border-right: 1px dashed #FFF;
+  border-bottom: none;
+}
+#colophon .widget .widget-title {
+  color: #FFF;
 }
 #colophon #site-generator {
   text-transform: lowercase;
-  font-size: 1.4em;
+  font-size: 1.1em;
   line-height: 1.2em;
   color: #ddd;
+  text-align: center;
+  padding: 2em 0;
 }
 #colophon #site-generator a {
-  color: #e7e7e7;
+  color: #7f8c8d;
 }
 .box {
   border: 1px solid #ddd;
