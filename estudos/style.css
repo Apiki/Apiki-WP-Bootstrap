@@ -496,9 +496,12 @@ footer.entry-meta span {
   padding: 0 0 1em 0;
 }
 #comments .comment-content {
-  margin: -20px 0 0 95px;
+  margin: -40px 0 0 95px;
   float: left;
   width: 85%;
+}
+#comments .comment-content p {
+  font-size: 1.6rem;
 }
 #comments .commentlist {
   list-style: none;
@@ -518,16 +521,18 @@ footer.entry-meta span {
   position: absolute;
   right: 0;
   top: 50px;
-  font-size: 1.3em;
+  font-size: 1.4rem;
   color: #e74c3c;
 }
 #comments .comment-author {
   float: left;
   margin-right: 20px;
   width: 100%;
+  font-size: .9em;
+  color: #2B2B2B;
 }
 #comments .comment-author a {
-  display: none;
+  color: #2B2B2B;
 }
 #comments .comment-author .avatar {
   width: 64px;
@@ -541,6 +546,12 @@ footer.entry-meta span {
 #comments .comment-author .fn a {
   color: #777777;
 }
+#comments .comment-author .edit-link {
+  margin: 70px 0 0;
+  position: absolute;
+  left: 0;
+  border: none;
+}
 #comments #commentform {
   background: #ECF0F1;
   padding: 20px;
@@ -550,7 +561,7 @@ footer.entry-meta span {
   display: none;
 }
 #comments .children {
-  margin-left: 10em;
+  margin-left: 5em;
 }
 .widget {
   padding: 10px 0 20px;
@@ -888,14 +899,26 @@ input[type="color"].error {
   padding: 20px 50px;
 }
 #colophon .widget {
-  width: 28%;
+  width: 33%;
+  min-height: 300px;
   float: left;
-  margin-left: 5%;
+  padding: 0 5%;
   border-right: 1px dashed #FFF;
   border-bottom: none;
 }
 #colophon .widget .widget-title {
   color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.3em;
+}
+#colophon .widget #wp-calendar thead {
+  background-color: #2C3E50;
+}
+#colophon .widget #wp-calendar tbody td {
+  background-color: #263d53;
+  color: #FFF;
+  border-color: #3c4c5c;
 }
 #colophon #site-generator {
   text-transform: lowercase;

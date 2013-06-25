@@ -447,9 +447,13 @@ footer.entry-meta {
 	}
 
 	.comment-content {
-		margin: -20px 0 0 95px;
+		margin: -40px 0 0 95px;
 		float: left;
 		width: 85%;
+
+		p {
+			font-size: 1.6rem;
+		}
 	}
 
 	.commentlist {
@@ -471,7 +475,7 @@ footer.entry-meta {
 				position: absolute;
 				right: 0;
 				top: 50px;
-				font-size: 1.3em;
+				font-size: 1.4rem;
 				color: @link;
 			}
 		}
@@ -481,9 +485,11 @@ footer.entry-meta {
 		float: left;
 		margin-right: 20px;
 		width: 100%;
+		font-size: .9em;
+		color: #2B2B2B;
 
 		a {
-			display: none;
+			color: #2B2B2B;
 		}
 
 		.avatar {
@@ -494,13 +500,17 @@ footer.entry-meta {
 		}
 
 		.fn {
-			// float: left;
 			margin: 1em 0;
-			// font-size: 1.6em;
 			a {
 				color: @text-normal;
-				// display: block;
 			}
+		}
+
+		.edit-link {
+			margin: 70px 0 0;
+			position: absolute;
+			left: 0;
+			border: none;
 		}
 	}
 
@@ -515,7 +525,7 @@ footer.entry-meta {
 	}
 
 	.children {
-		margin-left: 10em;
+		margin-left: 5em;
 	}
 }
 
