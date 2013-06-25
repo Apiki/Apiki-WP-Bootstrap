@@ -483,6 +483,7 @@ footer.entry-meta span {
 }
 #comments #respond h3 {
   margin-bottom: 1em;
+  font-size: 3rem;
 }
 #comments #respond input[type="text"] {
   font-size: 1.1em;
@@ -558,6 +559,9 @@ footer.entry-meta span {
 }
 #comments #commentform .form-allowed-tags {
   display: none;
+}
+#comments #commentform p {
+  font-size: 1.6rem;
 }
 #comments .children {
   margin-left: 5em;
