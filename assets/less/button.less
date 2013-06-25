@@ -1,0 +1,30 @@
+//
+// Buttons
+// --------------------------------------------------
+
+.button, form input[type="submit"], .checkout button {
+	color: 	     @buttonTextColor;
+	font-size:   @baseFontSize * 2; // 20px
+	line-height: @baseLineHeight; // 120%
+	display: inline-block;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 @buttontextShadowColor;
+	border: 1px solid @buttonBorderColor;
+	padding: 8px 22px 10px 22px;
+	cursor: pointer;
+	.border-radius(5px);
+	.verticalGradient(@startColor: @buttonStartColor, @endColor: @buttonEndColor);
+	.box-shadow(0 1px 2px 0 rgba(255, 255, 255, 0.7) inset);
+
+	&:hover, &:focus {
+		color: #fff;
+		.verticalGradient(@startColor: @buttonStartHoverColor, @endColor: @buttonEndColor);
+	}
+	&:active { .verticalGradient(@startColor: @buttonEndColor, @endColor: @buttonStartHoverColor); }
+}
+.button.secondary {
+	border-color: @secondaryBorderColor;
+	.verticalGradient(@startColor: @secondaryButtonStartColor, @endColor: @secondaryButtonEndColor);
+	&:hover, &:focus { .verticalGradient(@startColor: @secondaryButtonStartColorHover, @endColor: @secondaryButtonEndColor);	}
+	&:active { .verticalGradient(@startColor: @secondaryButtonEndColor, @endColor: @secondaryButtonStartColorHover); }
+}

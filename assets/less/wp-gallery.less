@@ -1,0 +1,29 @@
+//
+// Wp Gallery
+// --------------------------------------------------
+.gallery { margin-bottom: 20px; }
+.gallery .gallery-item {
+    float: left;
+    margin: @galleryItemMargin;
+    width:  @widthGallery;
+    text-align: center;
+}
+.gallery img {
+    border: 2px solid @itemGalleryBorderColor;
+    padding: 3%;
+    max-width: 100% !important;
+    height: auto;
+    .box-shadow(0 1px 6px rgba(0, 0, 0, 0.2) );
+	.transition(0.2s);
+    display: block;
+	&:hover, &:focus { .box-shadow(0 1px 6px rgba(0, 0, 0, 0.4) ); }
+
+}
+.gallery .gallery-caption { margin-left: 0; }
+.gallery .wp-caption-text {
+   	margin: 0 auto;
+    position: static;
+    background: @galleryCaptionBg;
+    color: 		@galleryCaptionColor;
+    width: 		@galleryWidthCaption;
+}

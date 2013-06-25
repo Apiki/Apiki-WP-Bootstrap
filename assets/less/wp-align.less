@@ -1,0 +1,41 @@
+//
+// Wp Align
+// --------------------------------------------------
+
+/** Images wp **/
+.alignright, a img.alignright {
+	float:right;
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 1em 1em; 
+}
+.alignleft, a img.alignleft{
+	float:left;
+	max-width: 100%;
+	height: auto;
+	margin: 0 1em 1em 0 !important; 
+}
+.aligncenter, a img.aligncenter {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-left: auto !important;
+	margin-right:auto !important; 
+}
+.wp-caption {
+	margin: 1em;
+	border: 0;
+	padding: 0;
+	background: @WpCaptiontBg;
+	position: relative;
+}
+.wp-caption-text { 
+    bottom: 2px;
+    color: 		@WpCaptionTextColor;
+    background: @WpCaptionTextBg;
+    left: 0;
+    margin-bottom: 0 !important;
+    position: absolute;
+    padding: 7px;
+    width: 92.4%;
+}
