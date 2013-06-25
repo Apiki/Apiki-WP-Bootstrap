@@ -54,6 +54,14 @@ html {
   background-color: #f9f9f9;
   font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.page-title {
+  margin: 0 0 2em 0;
+}
+.page-title span {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  color: #2B2B2B;
+}
 a {
   color: #e74c3c;
 }
@@ -512,6 +520,7 @@ footer.entry-meta span {
   width: 100%;
   padding: 3em 0;
   position: relative;
+  list-style: none;
   border-bottom: 1px solid #ccc;
 }
 #comments .commentlist li:last-child {
@@ -523,6 +532,9 @@ footer.entry-meta span {
   top: 50px;
   font-size: 1.4rem;
   color: #e74c3c;
+}
+#comments .commentlist li .comment-awaiting-moderation {
+  margin: 0 0 0 6em;
 }
 #comments .comment-author {
   float: left;
@@ -877,6 +889,10 @@ input[type="color"].error {
   text-transform: lowercase;
 }
 /* content */
+.singular #primary {
+  width: 100%;
+  padding-right: 0px;
+}
 #main {
   position: relative;
   padding: 50px 50px 100px;
@@ -894,6 +910,16 @@ input[type="color"].error {
   padding: 20px;
   border-radius: 4px;
 }
+.search-results .entry-meta {
+  display: none;
+}
+.search-results .entry-summary {
+  margin-top: 1em;
+}
+.search-results .post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
 /* footer */
 #colophon {
   clear: both;
@@ -901,17 +927,32 @@ input[type="color"].error {
   background-color: #34495e;
   padding: 20px 50px;
 }
+#colophon a {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 1.6rem;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+#colophon a:hover {
+  margin-left: 5px;
+  text-decoration: none;
+}
 #colophon .widget {
-  width: 33%;
-  min-height: 300px;
+  width: 25%;
+  min-height: 200px;
   float: left;
-  padding: 0 5%;
-  border-right: 1px dashed #FFF;
+  padding: 0 2%;
   border-bottom: none;
+}
+#colophon .widget:last-child {
+  border-right: none;
 }
 #colophon .widget .widget-title {
   color: #FFF;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 1.3em;
 }
@@ -922,6 +963,12 @@ input[type="color"].error {
   background-color: #263d53;
   color: #FFF;
   border-color: #3c4c5c;
+}
+#colophon .widget .post-date {
+  display: none;
+}
+#colophon .widget_categories li {
+  width: 100%;
 }
 #colophon #site-generator {
   text-transform: lowercase;

@@ -53,6 +53,16 @@ html {
 	font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.page-title {
+	margin: 0 0 2em 0;
+
+	span {
+		display: inline-block;
+		margin: 0 0 0 10px;
+		color: #2B2B2B;
+	}
+}
+
 /////
 //elements
 /////
@@ -466,6 +476,7 @@ footer.entry-meta {
 			width: 100%;
 			padding: 3em 0;
 			position: relative;
+			list-style: none;
 			border-bottom: 1px solid #ccc;
 
 			&:last-child {
@@ -478,6 +489,10 @@ footer.entry-meta {
 				top: 50px;
 				font-size: 1.4rem;
 				color: @link;
+			}
+
+			.comment-awaiting-moderation {
+				margin: 0 0 0 6em;
 			}
 		}
 	}
@@ -879,6 +894,13 @@ input[type="color"].error {
 }
 
 /* content */
+.singular {
+	#primary {
+		width: 100%;
+		padding-right: 0px;
+	}
+}
+
 #main {
 	position: relative;
 	padding: 50px 50px 100px;
@@ -897,24 +919,55 @@ input[type="color"].error {
 	.radius(4px);
 }
 
+.search-results {
+
+	.entry-meta {
+		display: none;
+	}
+
+	.entry-summary {
+		margin-top: 1em;
+	}
+
+	.post {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	}
+
+}
+
 /* footer */
 #colophon {
 	clear:both;
 	position: relative;
 	background-color: #34495e;
-	padding: 20px 50px; 
+	padding: 20px 50px;
+
+	a {
+		background-color: transparent;
+		color: #FFF;
+		font-size: 1.6rem;
+		.transition(all, 0.3s, ease-in);
+
+		&:hover {
+			margin-left: 5px;
+			text-decoration: none;
+		}
+	}
 
 	.widget {
-		width: 33%;
-		min-height: 300px;
+		width: 25%;
+		min-height: 200px;
 		float: left;
-		padding: 0 5%;
-		border-right: 1px dashed #FFF;
+		padding: 0 2%;
 		border-bottom: none;
+
+		&:last-child {
+			border-right: none;
+		}
 
 		.widget-title {
 			color: #FFF;
-			text-align: center;
 			text-transform: uppercase;
 			margin-bottom: 1.3em;
 		}
@@ -931,6 +984,16 @@ input[type="color"].error {
 					border-color: #3c4c5c;
 				}
 			}
+		}
+
+		.post-date {
+			display: none;
+		}
+	}
+
+	.widget_categories {
+		li {
+			width: 100%;
 		}
 	}
 
