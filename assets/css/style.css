@@ -1,14 +1,13 @@
 /*
-Theme Name: Twenty Eleven
-Theme URI: http://wordpress.org/extend/themes/twentyeleven
-Author: the WordPress team
-Author URI: http://wordpress.org/
-Description: The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
-Version: 1.4
+Theme Name: Apiki Flat UI 
+Theme URI: http://apiki.com/themes/FlatUI
+Author: Giovanni Keppelen | Bernard de Luna
+Author URI: http://apiki.com/
+Description: Description
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
-Text Domain: twentyeleven
+Tags: Themes, Flat UI, Apiki Themes
 */
 * {
   padding: 0;
@@ -54,6 +53,14 @@ dl:after {
 html {
   background-color: #f9f9f9;
   font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.page-title {
+  margin: 0 0 2em 0;
+}
+.page-title span {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  color: #2B2B2B;
 }
 a {
   color: #e74c3c;
@@ -292,6 +299,10 @@ input[type=submit]:hover {
   font-size: 1.4em;
   font-weight: 100;
   text-transform: lowercase;
+<<<<<<< HEAD:estudos/style.css
+=======
+  border-right: none !important;
+>>>>>>> 78bd4f575ba28e26739b6778e520ed5962529213:assets/css/style.css
 }
 .comments-link a {
   color: #ddd;
@@ -304,6 +315,26 @@ input[type=submit]:hover {
 }
 .entry-meta a {
   color: #e74c3c;
+}
+.entry-meta span {
+  padding: .4em .1em;
+  display: inline-block;
+  border-right: 1px solid #ccc;
+}
+.entry-meta span:last-child {
+  border: none;
+}
+.entry-meta .sep {
+  border: none;
+}
+.entry-meta .entry-utility-prep {
+  border: none;
+}
+footer.entry-meta .sep {
+  display: none;
+}
+footer.entry-meta span {
+  padding-right: .5em;
 }
 .entry-date,
 .leave-meta-reply,
@@ -458,69 +489,97 @@ input[type=submit]:hover {
 .gallery .gallery-item:hover a:before {
   box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.3), inset 0 0 0 10px rgba(255, 255, 255, 0.4), inset 0 0 0 20px rgba(255, 255, 255, 0.2), inset 0 0 0 30px rgba(255, 255, 255, 0.1);
 }
-#respond {
+#comments #respond {
   margin: 5em 0;
 }
-#respond h3 {
+#comments #respond h3 {
   margin-bottom: 1em;
+  font-size: 3rem;
 }
-#respond input[type="text"] {
+#comments #respond input[type="text"] {
   font-size: 1.1em;
 }
-#respond label {
+#comments #respond label {
   font-size: .9em;
   margin-bottom: 0em;
 }
-.comment {
+#comments .comment {
   padding: 0 0 1em 0;
 }
-.comment-content {
-  margin: -20px 0 0 95px;
+#comments .comment-content {
+  margin: -40px 0 0 95px;
   float: left;
-  width: 100%;
+  width: 85%;
 }
-.commentlist {
+#comments .comment-content p {
+  font-size: 1.6rem;
+}
+#comments .commentlist {
   list-style: none;
+  font-size: 1.6em;
 }
-.commentlist li {
+#comments .commentlist li {
   float: left;
   width: 100%;
   padding: 3em 0;
   position: relative;
+  list-style: none;
   border-bottom: 1px solid #ccc;
 }
-.commentlist li:last-child {
+#comments .commentlist li:last-child {
   border: none;
 }
-.commentlist li .reply {
+#comments .commentlist li .reply {
   position: absolute;
   right: 0;
   top: 50px;
-  font-size: 1.3em;
+  font-size: 1.4rem;
   color: #e74c3c;
 }
-.comment-author {
+#comments .commentlist li .comment-awaiting-moderation {
+  margin: 0 0 0 6em;
+}
+#comments .comment-author {
   float: left;
   margin-right: 20px;
   width: 100%;
+  font-size: .9em;
+  color: #2B2B2B;
 }
-.comment-author a {
-  display: none;
+#comments .comment-author a {
+  color: #2B2B2B;
 }
-.comment-author .avatar {
+#comments .comment-author .avatar {
   width: 64px;
   height: 64px;
   float: left;
   margin: 0 30px 0 0;
 }
-.comment-author .fn {
-  float: left;
+#comments .comment-author .fn {
   margin: 1em 0;
-  font-size: 1.6em;
 }
-.comment-author .fn a {
+#comments .comment-author .fn a {
   color: #777777;
-  display: block;
+}
+#comments .comment-author .edit-link {
+  margin: 70px 0 0;
+  position: absolute;
+  left: 0;
+  border: none;
+}
+#comments #commentform {
+  background: #ECF0F1;
+  padding: 20px;
+  border-radius: 4px;
+}
+#comments #commentform .form-allowed-tags {
+  display: none;
+}
+#comments #commentform p {
+  font-size: 1.6rem;
+}
+#comments .children {
+  margin-left: 5em;
 }
 .widget {
   padding: 10px 0 20px;
@@ -632,9 +691,11 @@ input[type=submit]:hover {
 .tagcloud a:hover {
   background-color: #2980b9;
   color: #FFF;
+  text-decoration: none;
 }
 #wp-calendar {
   text-align: center;
+  width: 100%;
   border-collapse: collapse;
   margin-bottom: 3em;
 }
@@ -831,6 +892,10 @@ input[type="color"].error {
   text-transform: lowercase;
 }
 /* content */
+.singular #primary {
+  width: 100%;
+  padding-right: 0px;
+}
 #main {
   position: relative;
   padding: 50px 50px 100px;
@@ -848,21 +913,80 @@ input[type="color"].error {
   padding: 20px;
   border-radius: 4px;
 }
+.search-results .entry-meta {
+  display: none;
+}
+.search-results .entry-summary {
+  margin-top: 1em;
+}
+.search-results .post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
 /* footer */
 #colophon {
   clear: both;
   position: relative;
-  background-color: #2b2b2b;
+  background-color: #34495e;
   padding: 20px 50px;
+}
+#colophon a {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 1.6rem;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+#colophon a:hover {
+  margin-left: 5px;
+  text-decoration: none;
+}
+#colophon .widget {
+  width: 25%;
+  min-height: 200px;
+  float: left;
+  padding: 0 2%;
+  border-bottom: none;
+}
+#colophon .widget:last-child {
+  border-right: none;
+}
+#colophon .widget .widget-title {
+  color: #FFF;
+  text-transform: uppercase;
+  margin-bottom: 1.3em;
+}
+#colophon .widget #wp-calendar thead {
+  background-color: #2C3E50;
+}
+#colophon .widget #wp-calendar tbody td {
+  background-color: #263d53;
+  color: #FFF;
+  border-color: #3c4c5c;
+}
+#colophon .widget .post-date {
+  display: none;
+}
+#colophon .widget_categories li {
+  width: 100%;
 }
 #colophon #site-generator {
   text-transform: lowercase;
+<<<<<<< HEAD:estudos/style.css
   font-size: 1.4em;
+=======
+  font-size: 1.1em;
+>>>>>>> 78bd4f575ba28e26739b6778e520ed5962529213:assets/css/style.css
   line-height: 1.2em;
   color: #ddd;
+  text-align: center;
+  padding: 2em 0;
 }
 #colophon #site-generator a {
-  color: #e7e7e7;
+  color: #7f8c8d;
 }
 .box {
   border: 1px solid #ddd;
