@@ -55,7 +55,6 @@ html {
 
 .page-title {
 	margin: 0 0 2em 0;
-
 	span {
 		display: inline-block;
 		margin: 0 0 0 10px;
@@ -189,9 +188,9 @@ input[type=submit] {
 /////
 //alert
 /////
-.msg {
+.msg, .comment-awaiting-moderation {
 	padding:15px 20px;
-	font-size:1.4em;
+	font-size:1.4rem;
 	margin-bottom:1em;
 	background-color: #f9f9f9;
 	border: 1px solid #ddd;
@@ -229,10 +228,18 @@ input[type=submit] {
 /////
 //post
 /////
-.post {position: relative;}
+.post, .page {position: relative;}
 .entry-header {
 	position:relative;
-	.entry-title {margin-right:150px;}
+	.entry-title {
+		line-height:1em;
+		margin-right:150px;
+	}
+	.entry-meta {
+		border-top:none;
+		border-bottom-style: dashed;
+		margin-top: -10px;
+	}
 }
 .comments-link {
 	position:absolute;
@@ -243,62 +250,70 @@ input[type=submit] {
 	font-weight: 100;
 	text-transform: lowercase;
 	border-right: none !important;
+	.entry-header & {display: none;}
 	a {
 		color:#ddd;
 	}
 }
+.entry-content {
+	padding:20px 0;
+}
 .entry-meta {
 	font-size: 1.4em;
 	color: @text-normal;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ccc;
-
-	a {
-		color: @link;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	.post > &, .page > & {
+		padding:10px 0;
+		margin-bottom:50px;
 	}
-
-	span {
-		padding: .4em .1em;
-		display: inline-block;
-		border-right: 1px solid #ccc;
-
-		&:last-child {
-			border: none;
-		}
+	.page & {
+		border:none;
+		padding:0;
 	}
-
+	a {color: @link;}
+	span {display: inline-block;}
 	.sep {
 		border: none;
 	}
-
 	.entry-utility-prep {
 		border: none;
 	}
+	.edit-link {
+		width:45px;
+		height:45px;
+		font-size:1.2rem;
+		color:#fff;
+		position: absolute;
+		top:-23px;
+		left:-23px;
+		.radius(50%);
+		background-color: @link;
+		line-height:50px;
+		text-align:center;
+		vertical-align: middle;
+		padding:0;
+		border:0;
+		a {color:#fff;}
+	}
 }
-
-
 footer.entry-meta {
-	.sep {
-		display: none;
-	}
-
-	span {
-		padding-right: .5em;
-	}
+	.sep {display: none;}
 }
-
+#nav-single {display: none;}
 .entry-date, .leave-meta-reply, .category-meta-link, .by-author, .edit-link {
 	display: inline-block;
-	padding:15px 0;
+	padding:15px;
 	text-transform: lowercase;
+	.entry-header & {padding: 0 0 10px;}
 }
-
+.entry-header .entry-date {padding:0 5px;}
 .by-author {display:none;}
 .edit-link {
 	float:right;
+	font-size:1.6rem;
 	border-left:1px solid #ccc;
 	padding:15px;
-	background-color: #f9f9f9;
 	text-transform: lowercase;
 }
 .entry-content {
@@ -374,6 +389,11 @@ footer.entry-meta {
 		font-size: 2rem;
 		line-height:1.4em;
 		margin-bottom:1.4em;
+		p {
+			margin-bottom: 0;
+			font-size:1em;
+			color: inherit;
+		}
 	}
 	blockquote:before {
 		content: "";
@@ -454,82 +474,78 @@ footer.entry-meta {
 	}
 
 	.comment {
-		padding: 0 0 1em 0;
+		position: relative;
+		padding: 20px 0 0 96px;
 	}
-
 	.comment-content {
-		margin: -40px 0 0 95px;
-		float: left;
-		width: 85%;
-
 		p {
 			font-size: 1.6rem;
 		}
 	}
-
 	.commentlist {
 		list-style: none;
 		font-size: 1.6em;
 
-		li {
-			float: left;
-			width: 100%;
-			padding: 3em 0;
+		 li {
+			padding: 20px;
 			position: relative;
 			list-style: none;
-			border-bottom: 1px solid #ccc;
+			background-color: #f9f9f9;
+			margin: 20px 0 0;
+		}
+		 > li {
+			padding: 50px;
+			background-color: #fff;
+			margin-bottom: 20px;
 
 			&:last-child {
 				border: none;
 			}
-
 			.reply {
-				position: absolute;
-				right: 0;
-				top: 50px;
 				font-size: 1.4rem;
 				color: @link;
-			}
-
-			.comment-awaiting-moderation {
-				margin: 0 0 0 6em;
 			}
 		}
 	}
 
 	.comment-author {
-		float: left;
-		margin-right: 20px;
-		width: 100%;
-		font-size: .9em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right:0;
+		z-index:1;
+		font-size: 1.4em;
 		color: #2B2B2B;
-
-		a {
-			color: #2B2B2B;
-		}
-
 		.avatar {
-			width: 64px;
-			height: 64px;
+			border-radius: 50%;
+			width: 68px;
+			height: 68px;
 			float: left;
 			margin: 0 30px 0 0;
 		}
-
 		.fn {
 			margin: 1em 0;
 			a {
 				color: @text-normal;
 			}
 		}
-
 		.edit-link {
-			margin: 70px 0 0;
+			margin: 60px 0 0;
 			position: absolute;
 			left: 0;
 			border: none;
+			text-align:center;
+			display: block;
+			width:68px;
+			padding:0;
 		}
 	}
-
+	.comment-awaiting-moderation {
+		display: block;
+		clear: both;
+		margin: .5em 0 1em;
+		font-style: normal;
+	}
 	#commentform {
 		background: #ECF0F1;
 		padding: 20px;
@@ -582,6 +598,7 @@ footer.entry-meta {
 		list-style: inside none;
 		font-size: 1.4rem;
 		margin-bottom:.5em;
+		&.recentcomments {margin-bottom:1em;}
 	}
 	a {
 		color: #7f8c8d;
@@ -650,21 +667,20 @@ footer.entry-meta {
 		}
 	}
 }
-
-.tagcloud {
+.widget_tag_cloud {
 	a {
-		list-style-type: none;
-		display: inline-block;
-		padding: .8em;
-		margin: 2px 5px;
-		background-color: #F9F9F9;
-		font-size: 1.2rem !important;
-		color: @text-normal;
-		.transition(background-color, .3s, ease-in);
-
-		&:hover {
-			background-color: #2980b9;
-			color: #FFF;
+		float:left;
+		margin:0 0 5px 5px;
+		display: block;
+		font-size:1.4rem !important;
+		line-height:1.2em;
+		color:#ecf0f1;
+		background-color: #bdc3c7;
+		padding:5px 10px;
+		.radius(4px);
+		.transition(background-color, .3s, linear);
+		&:focus, &:hover {
+			background-color: #d2d8dc;
 			text-decoration: none;
 		}
 	}
@@ -676,26 +692,20 @@ footer.entry-meta {
 		width: 100%;
 		border-collapse: collapse;
 		margin-bottom:3em;
-
 		caption {
 			font-size: 1.6em;
 			margin: 0 0 1em 0;
 		}
-
 		thead {
 			background-color: #2980B9;
 			color:#fff;
-
 			td, th {
 				padding:15px;
 				font-size:1.2em;
 				font-weight: 200;
 			}
-
 		}
-
 		tbody {
-
 			td, th {
 				background-color: #f9f9f9;
 				.transition(background-color, .3s, linear);
@@ -703,16 +713,21 @@ footer.entry-meta {
 				font-size:1.2em;
 				font-weight: 200;
 				border: 1px solid #ddd;
-
 				&:hover {
 					background-color: #fff;
 				}
+				&.pad, &.pad:hover {
+					background-color: #e7e7e7;
+				}
+				a {
+					display: block;
+					padding: 10px;
+					margin:-10px;
+					background-color: @link;
+					color:#fff;
+					text-decoration: none;
+				}
 			}
-
-			.pad {
-				background: transparent;
-			}
-
 		}
 }
 
@@ -841,6 +856,8 @@ input[type="color"].error {
 		color:#fff;
 		font-weight: 700;
 		text-transform: lowercase;
+		font-size:5.5rem;
+		margin:0;
 	}
 	hgroup h2, #site-description{
 		position: relative !important;
@@ -929,7 +946,7 @@ input[type="color"].error {
 		margin-top: 1em;
 	}
 
-	.post {
+	.post, .page {
 		border-bottom: 1px solid #ccc;
 		padding-bottom: 10px;
 	}
@@ -940,73 +957,16 @@ input[type="color"].error {
 #colophon {
 	clear:both;
 	position: relative;
-	background-color: #34495e;
+	background-color: #2980B9;
 	padding: 20px 50px;
-
-	a {
-		background-color: transparent;
-		color: #FFF;
-		font-size: 1.6rem;
-		.transition(all, 0.3s, ease-in);
-
-		&:hover {
-			margin-left: 5px;
-			text-decoration: none;
-		}
-	}
-
-	.widget {
-		width: 25%;
-		min-height: 200px;
-		float: left;
-		padding: 0 2%;
-		border-bottom: none;
-
-		&:last-child {
-			border-right: none;
-		}
-
-		.widget-title {
-			color: #FFF;
-			text-transform: uppercase;
-			margin-bottom: 1.3em;
-		}
-
-		#wp-calendar thead {
-			background-color: #2C3E50;
-		}
-
-		#wp-calendar {
-			tbody {
-				td {
-					background-color: #263d53;
-					color: #FFF;
-					border-color: #3c4c5c;
-				}
-			}
-		}
-
-		.post-date {
-			display: none;
-		}
-	}
-
-	.widget_categories {
-		li {
-			width: 100%;
-		}
-	}
-
 	#site-generator {
 		text-transform: lowercase;
-		font-size:1.1em;
+		font-size:1.4em;
 		line-height:1.2em;
 		color:#ddd;
 		text-align: center;
-		padding: 2em 0;
-
 		a {
-			color:#7f8c8d;
+			color:#fff;
 		}
 	}
 }
