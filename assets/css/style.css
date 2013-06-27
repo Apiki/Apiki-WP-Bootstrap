@@ -239,16 +239,18 @@ input[type=submit]:focus,
 input[type=submit]:hover {
   background-color: #48c9b0;
 }
-.msg {
+.msg,
+.comment-awaiting-moderation {
   padding: 15px 20px;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   margin-bottom: 1em;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-left: 4px solid #F1C40F;
   color: #777777;
 }
-.msg:before {
+.msg:before,
+.comment-awaiting-moderation:before {
   content: "";
   display: inline-block;
   margin-left: -27px;
@@ -258,38 +260,53 @@ input[type=submit]:hover {
   background-color: #F1C40F;
   border-radius: 6px;
 }
-.msg.alert {
+.msg.alert,
+.comment-awaiting-moderation.alert {
   border-left-color: #F1C40F;
 }
-.msg.alert:before {
+.msg.alert:before,
+.comment-awaiting-moderation.alert:before {
   background-color: #F1C40F;
 }
-.msg.success {
+.msg.success,
+.comment-awaiting-moderation.success {
   border-left-color: #2ECC71;
 }
-.msg.success:before {
+.msg.success:before,
+.comment-awaiting-moderation.success:before {
   background-color: #2ECC71;
 }
-.msg.error {
+.msg.error,
+.comment-awaiting-moderation.error {
   border-left-color: #E74C3C;
 }
-.msg.error:before {
+.msg.error:before,
+.comment-awaiting-moderation.error:before {
   background-color: #E74C3C;
 }
-.msg.info {
+.msg.info,
+.comment-awaiting-moderation.info {
   border-left-color: #3498DB;
 }
-.msg.info:before {
+.msg.info:before,
+.comment-awaiting-moderation.info:before {
   background-color: #3498DB;
 }
-.post {
+.post,
+.page {
   position: relative;
 }
 .entry-header {
   position: relative;
 }
 .entry-header .entry-title {
+  line-height: 1em;
   margin-right: 150px;
+}
+.entry-header .entry-meta {
+  border-top: none;
+  border-bottom-style: dashed;
+  margin-top: -10px;
 }
 .comments-link {
   position: absolute;
@@ -299,30 +316,37 @@ input[type=submit]:hover {
   font-size: 1.4em;
   font-weight: 100;
   text-transform: lowercase;
-<<<<<<< HEAD:estudos/style.css
-=======
   border-right: none !important;
->>>>>>> 78bd4f575ba28e26739b6778e520ed5962529213:assets/css/style.css
+}
+.entry-header .comments-link {
+  display: none;
 }
 .comments-link a {
   color: #ddd;
 }
+.entry-content {
+  padding: 20px 0;
+}
 .entry-meta {
   font-size: 1.4em;
   color: #777777;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.post > .entry-meta,
+.page > .entry-meta {
+  padding: 10px 0;
+  margin-bottom: 50px;
+}
+.page .entry-meta {
+  border: none;
+  padding: 0;
 }
 .entry-meta a {
   color: #e74c3c;
 }
 .entry-meta span {
-  padding: .4em .1em;
   display: inline-block;
-  border-right: 1px solid #ccc;
-}
-.entry-meta span:last-child {
-  border: none;
 }
 .entry-meta .sep {
   border: none;
@@ -330,11 +354,30 @@ input[type=submit]:hover {
 .entry-meta .entry-utility-prep {
   border: none;
 }
+.entry-meta .edit-link {
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  color: #fff;
+  position: absolute;
+  top: -23px;
+  left: -23px;
+  border-radius: 50%;
+  background-color: #e74c3c;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  border: 0;
+}
+.entry-meta .edit-link a {
+  color: #fff;
+}
 footer.entry-meta .sep {
   display: none;
 }
-footer.entry-meta span {
-  padding-right: .5em;
+#nav-single {
+  display: none;
 }
 .entry-date,
 .leave-meta-reply,
@@ -342,17 +385,27 @@ footer.entry-meta span {
 .by-author,
 .edit-link {
   display: inline-block;
-  padding: 15px 0;
+  padding: 15px;
   text-transform: lowercase;
+}
+.entry-header .entry-date,
+.entry-header .leave-meta-reply,
+.entry-header .category-meta-link,
+.entry-header .by-author,
+.entry-header .edit-link {
+  padding: 0 0 10px;
+}
+.entry-header .entry-date {
+  padding: 0 5px;
 }
 .by-author {
   display: none;
 }
 .edit-link {
   float: right;
+  font-size: 1.6rem;
   border-left: 1px solid #ccc;
   padding: 15px;
-  background-color: #f9f9f9;
   text-transform: lowercase;
 }
 .entry-content .alignleft {
@@ -437,6 +490,11 @@ footer.entry-meta span {
   line-height: 1.4em;
   margin-bottom: 1.4em;
 }
+.entry-content blockquote p {
+  margin-bottom: 0;
+  font-size: 1em;
+  color: inherit;
+}
 .entry-content blockquote:before {
   content: "";
   display: block;
@@ -504,12 +562,8 @@ footer.entry-meta span {
   margin-bottom: 0em;
 }
 #comments .comment {
-  padding: 0 0 1em 0;
-}
-#comments .comment-content {
-  margin: -40px 0 0 95px;
-  float: left;
-  width: 85%;
+  position: relative;
+  padding: 20px 0 0 96px;
 }
 #comments .comment-content p {
   font-size: 1.6rem;
@@ -519,39 +573,37 @@ footer.entry-meta span {
   font-size: 1.6em;
 }
 #comments .commentlist li {
-  float: left;
-  width: 100%;
-  padding: 3em 0;
+  padding: 20px;
   position: relative;
   list-style: none;
-  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin: 20px 0 0;
 }
-#comments .commentlist li:last-child {
+#comments .commentlist > li {
+  padding: 50px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+#comments .commentlist > li:last-child {
   border: none;
 }
-#comments .commentlist li .reply {
-  position: absolute;
-  right: 0;
-  top: 50px;
+#comments .commentlist > li .reply {
   font-size: 1.4rem;
   color: #e74c3c;
 }
-#comments .commentlist li .comment-awaiting-moderation {
-  margin: 0 0 0 6em;
-}
 #comments .comment-author {
-  float: left;
-  margin-right: 20px;
-  width: 100%;
-  font-size: .9em;
-  color: #2B2B2B;
-}
-#comments .comment-author a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 1.4em;
   color: #2B2B2B;
 }
 #comments .comment-author .avatar {
-  width: 64px;
-  height: 64px;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
   float: left;
   margin: 0 30px 0 0;
 }
@@ -562,10 +614,20 @@ footer.entry-meta span {
   color: #777777;
 }
 #comments .comment-author .edit-link {
-  margin: 70px 0 0;
+  margin: 60px 0 0;
   position: absolute;
   left: 0;
   border: none;
+  text-align: center;
+  display: block;
+  width: 68px;
+  padding: 0;
+}
+#comments .comment-awaiting-moderation {
+  display: block;
+  clear: both;
+  margin: .5em 0 1em;
+  font-style: normal;
 }
 #comments #commentform {
   background: #ECF0F1;
@@ -599,6 +661,9 @@ footer.entry-meta span {
   list-style: inside none;
   font-size: 1.4rem;
   margin-bottom: .5em;
+}
+.widget li.recentcomments {
+  margin-bottom: 1em;
 }
 .widget a {
   color: #7f8c8d;
@@ -674,23 +739,25 @@ footer.entry-meta span {
   background-color: #d2d8dc;
   text-decoration: none;
 }
-.tagcloud a {
-  list-style-type: none;
-  display: inline-block;
-  padding: .8em;
-  margin: 2px 5px;
-  background-color: #F9F9F9;
-  font-size: 1.2rem !important;
-  color: #777777;
-  -webkit-transition: background-color 0.3s ease-in;
-  -moz-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
-  -ms-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
+.widget_tag_cloud a {
+  float: left;
+  margin: 0 0 5px 5px;
+  display: block;
+  font-size: 1.4rem !important;
+  line-height: 1.2em;
+  color: #ecf0f1;
+  background-color: #bdc3c7;
+  padding: 5px 10px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
-.tagcloud a:hover {
-  background-color: #2980b9;
-  color: #FFF;
+.widget_tag_cloud a:focus,
+.widget_tag_cloud a:hover {
+  background-color: #d2d8dc;
   text-decoration: none;
 }
 #wp-calendar {
@@ -730,8 +797,20 @@ footer.entry-meta span {
 #wp-calendar tbody th:hover {
   background-color: #fff;
 }
-#wp-calendar tbody .pad {
-  background: transparent;
+#wp-calendar tbody td.pad,
+#wp-calendar tbody th.pad,
+#wp-calendar tbody td.pad:hover,
+#wp-calendar tbody th.pad:hover {
+  background-color: #e7e7e7;
+}
+#wp-calendar tbody td a,
+#wp-calendar tbody th a {
+  display: block;
+  padding: 10px;
+  margin: -10px;
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
 }
 .blogroll img {
   display: none;
@@ -837,6 +916,8 @@ input[type="color"].error {
   color: #fff;
   font-weight: 700;
   text-transform: lowercase;
+  font-size: 5.5rem;
+  margin: 0;
 }
 #branding hgroup h2,
 #branding #site-description {
@@ -919,7 +1000,8 @@ input[type="color"].error {
 .search-results .entry-summary {
   margin-top: 1em;
 }
-.search-results .post {
+.search-results .post,
+.search-results .page {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
 }
@@ -927,66 +1009,18 @@ input[type="color"].error {
 #colophon {
   clear: both;
   position: relative;
-  background-color: #34495e;
+  background-color: #2980B9;
   padding: 20px 50px;
-}
-#colophon a {
-  background-color: transparent;
-  color: #FFF;
-  font-size: 1.6rem;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-#colophon a:hover {
-  margin-left: 5px;
-  text-decoration: none;
-}
-#colophon .widget {
-  width: 25%;
-  min-height: 200px;
-  float: left;
-  padding: 0 2%;
-  border-bottom: none;
-}
-#colophon .widget:last-child {
-  border-right: none;
-}
-#colophon .widget .widget-title {
-  color: #FFF;
-  text-transform: uppercase;
-  margin-bottom: 1.3em;
-}
-#colophon .widget #wp-calendar thead {
-  background-color: #2C3E50;
-}
-#colophon .widget #wp-calendar tbody td {
-  background-color: #263d53;
-  color: #FFF;
-  border-color: #3c4c5c;
-}
-#colophon .widget .post-date {
-  display: none;
-}
-#colophon .widget_categories li {
-  width: 100%;
 }
 #colophon #site-generator {
   text-transform: lowercase;
-<<<<<<< HEAD:estudos/style.css
   font-size: 1.4em;
-=======
-  font-size: 1.1em;
->>>>>>> 78bd4f575ba28e26739b6778e520ed5962529213:assets/css/style.css
   line-height: 1.2em;
   color: #ddd;
   text-align: center;
-  padding: 2em 0;
 }
 #colophon #site-generator a {
-  color: #7f8c8d;
+  color: #fff;
 }
 .box {
   border: 1px solid #ddd;
