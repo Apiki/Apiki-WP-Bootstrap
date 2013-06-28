@@ -1,6 +1,6 @@
 #Apiki WP Bootstrap
 
-Apiki WP Bootstrap é um framework CSS para Wordpress para um tema mais elegante e desenvolvimento rápido e flexivel para a plataforma. Projeto da [Apiki](https://twitter.com/apikiWordPress), mantido por [Giovanni Keppelen](https://twitter.com/keppelen) e [Bernard de Luna](https://twitter.com/bernarddeluna).
+Apiki WP Bootstrap é um framework CSS para um Wordpress mais elegante, rápido e flexivel. Projeto da [Apiki](https://twitter.com/apikiWordPress), mantido por [Giovanni Keppelen](https://twitter.com/keppelen) e [Bernard de Luna](https://twitter.com/bernarddeluna).
 
 
 #Iniciando
@@ -43,7 +43,7 @@ Concluído você ja pode rodar o make para compilação do CSS.
 * [https://twitter.com/bernarddeluna](https://twitter.com/bernarddeluna)
 
 
-#Licensa
+#Licença
 
 
 Código está sob licença [MIT](http://rem.mit-license.org/) e conteúdo está sob [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
