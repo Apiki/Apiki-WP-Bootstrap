@@ -1,0 +1,26 @@
+{
+  "name": "Apiki-WP-Bootstrap",
+  "description": "framework CSS para Wordpress para um tema mais elegante e desenvolvimento rápido e flexivel para a plataforma",
+  "version": "0.1.0",
+  "keywords": [
+    "bootstrap",
+    "css",
+    "Wordpress"
+  ],
+  "homepage": "http://apiki.github.com/flatui/",
+  "author": "Apiki Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Apiki/Apiki-WP-Bootstrap.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://rem.mit-license.org/"
+    }
+  ],
+  "devDependencies": {
+    "recess": "1.1.8",
+    "connect": "2.1.3"
+  }
+}
