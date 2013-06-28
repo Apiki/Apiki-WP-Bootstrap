@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+	* {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+	}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+		html {
+			font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		.row {
+			width: 1024px;
+			margin: 0 auto;
+		}
+
+		ul li {
+			display: inline-block;
+			margin: 20px 3px;
+			font-size: 1.3em;
+		}
+
+		li a {
+			color: #ccc;
+			-webkit-transition: color .5s linear;
+		  -moz-transition: color .5s linear;
+		  -o-transition: color .5s linear;
+		  -ms-transition: color .5s linear;
+		  transition: color .5s linear;
+		}
+
+		li a:hover {
+			color: #FFF;
+			text-decoration: underline;
+		}
+
+/* ==========================================================================
+   Tipografia
+   ========================================================================== */
+		p {
+			font-size: 1.6em;
+			line-height: 1.5em;
+			color: #777;
+		}
+
+		h1, h2 {
+			font-size: 10em;
+			padding: 1em 0 .8em 0;
+			font-weight: 100;
+			display: block;
+		}
+
+		h2 {
+			font-size: 2.5em;
+			line-height: 1.6em;
+			padding: 0 3em 1.5em 3em;
+		}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+	.header {
+		text-align: center;
+		color: #FFF;
+		background: #e74c3c;
+		padding: 3em 0;
+	}
+
+		.header h2 {
+			padding: 0 0 1.5em 0;
+			font-size: 2.3em;
+		}
+
+
+/* ==========================================================================
+   Button
+   ========================================================================== */
+	.btn {
+		display:inline-block;
+		padding: 25px 40px;
+		margin: 0 8px;
+		border-radius: 2px;
+		color:#fff;
+		font-size:3rem;
+		font-weight: 100;
+		background-color: #bdc3c7;
+		cursor: pointer;
+		-webkit-transition: background-color .3s linear;
+	  -moz-transition: background-color .3s linear;
+	  -o-transition: background-color .3s linear;
+	  -ms-transition: background-color .3s linear;
+	  transition: background-color .3s linear;
+	}
+
+		.btn:hover {
+			background-color: #cacfd2;
+		}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+		.content {
+			padding: 4em 0;
+			text-align: left;
+		}
+
+		.content h2 {
+			padding-left: 0;
+			padding-bottom: 1em;
+		}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+		.footer {
+			background: #f6f6f6;
+			border-top: 1px solid #e5e5e5;
+			padding: 2em 0;
+			text-align: center;
+			font-size: .9rem;
+		}
+
+			.footer a {
+				color: #e74c3c;
+			}
