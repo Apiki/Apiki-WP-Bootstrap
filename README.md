@@ -46,4 +46,4 @@ Concluído você ja pode rodar o make para compilação do CSS.
 #Licensa
 
 
-Código está sob licença [MIT](http://zenorocha.mit-license.org/) e conteúdo está sob [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
+Código está sob licença [MIT](http://rem.mit-license.org/) e conteúdo está sob [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
