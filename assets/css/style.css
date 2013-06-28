@@ -12,6 +12,7 @@
    ========================================================================== */
 		html {
 			font: normal normal 10px/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+			letter-spacing: 1px;
 		}
 
 		.row {
@@ -56,7 +57,7 @@
 		}
 
 		h2 {
-			font-size: 2.5em;
+			font-size: 3em;
 			line-height: 1.6em;
 			padding: 0 3em 1.5em 3em;
 		}
@@ -68,12 +69,12 @@
 		text-align: center;
 		color: #FFF;
 		background: #e74c3c;
-		padding: 3em 0;
+		padding: 2em 0 3em 0;
 	}
 
 		.header h2 {
 			padding: 0 0 1.5em 0;
-			font-size: 2.3em;
+			font-size: 2em;
 		}
 
 
@@ -88,7 +89,7 @@
 		color:#fff;
 		font-size:3rem;
 		font-weight: 100;
-		background-color: #bdc3c7;
+		background-color: #FEB912;
 		cursor: pointer;
 		-webkit-transition: background-color .3s linear;
 	  -moz-transition: background-color .3s linear;
@@ -98,7 +99,7 @@
 	}
 
 		.btn:hover {
-			background-color: #cacfd2;
+			background-color: #e6a409;
 		}
 
 /* ==========================================================================
@@ -106,13 +107,17 @@
    ========================================================================== */
 
 		.content {
-			padding: 4em 0;
+			padding: 6em 0;
 			text-align: left;
+		}
+
+		.content p {
+			font-size: 1.8rem;
 		}
 
 		.content h2 {
 			padding-left: 0;
-			padding-bottom: 1em;
+			padding-bottom: .4em;
 		}
 
 /* ==========================================================================
