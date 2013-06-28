@@ -1,30 +1,50 @@
-//
-// Buttons
-// --------------------------------------------------
-
-.button, form input[type="submit"], .checkout button {
-	color: 	     @buttonTextColor;
-	font-size:   @baseFontSize * 2; // 20px
-	line-height: @baseLineHeight; // 120%
-	display: inline-block;
-	text-decoration: none;
-	text-shadow: 1px 1px 0 @buttontextShadowColor;
-	border: 1px solid @buttonBorderColor;
-	padding: 8px 22px 10px 22px;
-	cursor: pointer;
-	.border-radius(5px);
-	.verticalGradient(@startColor: @buttonStartColor, @endColor: @buttonEndColor);
-	.box-shadow(0 1px 2px 0 rgba(255, 255, 255, 0.7) inset);
-
-	&:hover, &:focus {
-		color: #fff;
-		.verticalGradient(@startColor: @buttonStartHoverColor, @endColor: @buttonEndColor);
+/////
+//buttons
+/////
+.btn, input[type=submit], input[type=reset] {
+	text-transform: lowercase;
+	display:inline-block;
+	padding: 15px 40px;
+	.radius(2px);
+	color:#fff;
+	font-size:1.6rem;
+	background-color: #bdc3c7;
+	cursor:pointer;
+	.transition(background-color, .3s, linear);
+	&:focus, &:hover {
+		background-color: #cacfd2;
 	}
-	&:active { .verticalGradient(@startColor: @buttonEndColor, @endColor: @buttonStartHoverColor); }
+	&.btn-small {
+		font-size: 1.4em;
+		padding:10px 30px;
+	}
+	&.btn-full {
+		display: block;
+		width:100%;
+		text-align: center;
+	}
+	&.btn-primary  {
+		background-color: #1abc9c;
+		&:focus, &:hover {
+			background-color: #48c9b0;
+		}
+	} 
+	&.btn-secondary {
+		background-color: #2980B9;
+		&:focus, &:hover {
+			background-color: #3498DB;
+		}
+	}
+	&.btn-danger, input[type=reset] {
+		background-color: #e74c3c;
+		&:focus, &:hover {
+			background-color: #ec7063;
+		}
+	}
 }
-.button.secondary {
-	border-color: @secondaryBorderColor;
-	.verticalGradient(@startColor: @secondaryButtonStartColor, @endColor: @secondaryButtonEndColor);
-	&:hover, &:focus { .verticalGradient(@startColor: @secondaryButtonStartColorHover, @endColor: @secondaryButtonEndColor);	}
-	&:active { .verticalGradient(@startColor: @secondaryButtonEndColor, @endColor: @secondaryButtonStartColorHover); }
+input[type=submit] {
+	background-color: #1abc9c;
+	&:focus, &:hover {
+		background-color: #48c9b0;
+	}
 }

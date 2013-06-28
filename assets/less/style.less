@@ -10,13 +10,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Themes, Flat UI, Apiki Themes
 */
 
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "theme-flat";
+@import "blog";
+@import "button";
+@import "forms";
+@import "alerts";
+@import "widgets";
+@import "comments";
+@import "wp-gallery";
 
-@import url(theme-flat.less);
-
-.box {
-	border: 1px solid #ddd;
-	padding: 15px;
-	margin: 25px 0 25px 0;
-
-	&:hover, &:focus { border-color: #999; }
-}

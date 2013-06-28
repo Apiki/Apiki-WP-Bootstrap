@@ -1,32 +1,38 @@
-//
-// Alerts
-// --------------------------------------------------
-
-.alert, .success, .info, .warning, .error {
-	border: 1px solid;
-	margin: 0 0 10px 0;
-    padding: 12px 35px 12px 14px;
-	font-size: @baseFontSize + 4; // 14px
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	.border-radius(4px);
-	color: 		  @colorTextWarning;
-}
-.alert, .warning {
-	background:   @bgAlert; 
-	border-color: @alertBorderColor;
-}
-.success {
-	color: 		  @colorTextSuccess;
-	background:   @bgSuccess; 
-	border-color: @successBorderColor;
-}
-.info {
-	color: 		  @colorTextInfo;
-	background:   @bgInfo; 
-	border-color: @infoBorderColor;
-}
-.error {
-	color: 		  @colorTextError;
-	background:   @bgError; 
-	border-color: @errorBorderColor;
+/////
+//alert
+/////
+.msg, .comment-awaiting-moderation {
+	padding:15px 20px;
+	font-size:1.4rem;
+	margin-bottom:1em;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-left: 4px solid #F1C40F;
+	color: @text-normal;
+	&:before {
+		content: "";
+		display: inline-block;
+		margin-left:-27px;
+		margin-right:9px;
+		height:10px;
+		width:10px;
+		background-color: #F1C40F;
+		.radius(6px);
+	}
+	&.alert {
+		border-left-color: #F1C40F;
+		&:before {background-color: #F1C40F;}
+	}
+	&.success {
+		border-left-color: #2ECC71;
+		&:before {background-color: #2ECC71;}
+	}
+	&.error {
+		border-left-color: #E74C3C;
+		&:before {background-color: #E74C3C;}
+	}
+	&.info {
+		border-left-color: #3498DB;
+		&:before {background-color: #3498DB;}
+	}
 }

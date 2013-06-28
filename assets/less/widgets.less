@@ -1,58 +1,161 @@
-//
-// Widgets
-// --------------------------------------------------
+/////
+//Widgets
+/////
 .widget {
-	margin-bottom: 30px;
-
-	ul { margin: 0; list-style-type: none; }
-	ul ul { margin-left: 10px; }
+	padding:10px 0 20px;
+	border-bottom:1px dashed #bdc3c7;
+	margin-bottom:20px;
+	&:last-child {
+		border:none;
+		padding-bottom:0;
+	}
 	.widget-title {
-		font-size: @baseFontSize + 20;
-		color: @WidgetColorTitle;
-		margin: 0 0 15px 0;
+		font-size:2em;
+		font-weight: 200;
+		text-transform: lowercase;
+	}
+	li {
+		list-style: inside none;
+		font-size: 1.4rem;
+		margin-bottom:.5em;
+		&.recentcomments {margin-bottom:1em;}
 	}
 	a {
-		color: #000000;
-		line-height: @baseLineHeight - 8;
-		text-decoration: none;
-
-		&:hover { text-decoration: underline; }
+		color: #7f8c8d;
+		&:hover, &:focus {text-decoration: underline;}
 	}
-	input[type="submit"] { 
-		margin: 0;
-		font-size: @baseFontSize + 6;
-		padding: 2px 12px 3px;
+}
+#secondary {
+	#searchform {
+		text-align:center;
+		.field {
+			float:left;
+			width: 60%;
+			margin:0;
+		}
+		.submit {
+			display:inline-block;
+			margin:0;
+			width:40%;
+			margin-left:-1%;
+		}
 	}
-	select { width: 100%; cursor: pointer; }
-
+	.submit {
+		font-size: 1.4em;
+		padding:10px 20px;
+	}
 }
 
-/** widget tag cloud **/
-.tagcloud a { margin: 0 5px; display: inline-block; }
-
-/** widget_reallysimpletwitterwidget **/
-.widget_reallysimpletwitterwidget { 
-	font-size: @baseFontSize + 6; 
-}
-
-/** widget_calendar **/
-.widget_calendar {
-	table { 
-		font-size:  @baseFontSize + 5; 
-		color: @WidgetColorTextTable;
+.widget_archive {
+	li {
+		list-style: inside none;
+		a {
+			display: block;
+			font-size:1.4rem;
+			line-height:1.2em;
+			color:#ecf0f1;
+			background-color: #bdc3c7;
+			padding:5px 10px;
+			.radius(4px);
+			.transition(background-color, .3s, linear);
+			&:focus, &:hover {
+				background-color: #d2d8dc;
+				text-decoration: none;
+			}
+		}
 	}
-	caption { text-align: left; }
-	th, td { border: 0; }
-	td { padding: 3px 3px; }
-	th { color: @WidgetColorTextTable; }
-	#today { color: @WidgetColorTextTableCurrent; }
+}
+.widget_categories {
+	& > ul {margin-left:-5px;}
+	.cat-item {
+		float:left;
+		margin:0 0 5px 5px;
+		list-style: inside none;
+		a {
+			display: block;
+			font-size:1.4rem;
+			line-height:1.2em;
+			color:#ecf0f1;
+			background-color: #bdc3c7;
+			padding:5px 10px;
+			.radius(4px);
+			.transition(background-color, .3s, linear);
+			&:focus, &:hover {
+				background-color: #d2d8dc;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.widget_tag_cloud {
+	a {
+		float:left;
+		margin:0 0 5px 5px;
+		display: block;
+		font-size:1.4rem !important;
+		line-height:1.2em;
+		color:#ecf0f1;
+		background-color: #bdc3c7;
+		padding:5px 10px;
+		.radius(4px);
+		.transition(background-color, .3s, linear);
+		&:focus, &:hover {
+			background-color: #d2d8dc;
+			text-decoration: none;
+		}
+	}
 }
 
-/** widget_links **/
-.widget_links {
-	li img { 
-		display: block; 
-		line-height: @baseLineHeight; 
-		max-width: 100%
+
+#wp-calendar {
+		text-align: center;
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom:3em;
+		caption {
+			font-size: 1.6em;
+			margin: 0 0 1em 0;
+		}
+		thead {
+			background-color: #2980B9;
+			color:#fff;
+			td, th {
+				padding:15px;
+				font-size:1.2em;
+				font-weight: 200;
+			}
+		}
+		tbody {
+			td, th {
+				background-color: #f9f9f9;
+				.transition(background-color, .3s, linear);
+				padding:10px;
+				font-size:1.2em;
+				font-weight: 200;
+				border: 1px solid #ddd;
+				&:hover {
+					background-color: #fff;
+				}
+				&.pad, &.pad:hover {
+					background-color: #e7e7e7;
+				}
+				a {
+					display: block;
+					padding: 10px;
+					margin:-10px;
+					background-color: @link;
+					color:#fff;
+					text-decoration: none;
+				}
+			}
+		}
+}
+
+.blogroll {
+	img {
+		display: none;
+	}
+	a {
+		display: block;
 	}
 }
