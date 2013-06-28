@@ -1,14 +1,43 @@
-//
-// Table
-// --------------------------------------------------
-
+/////
+//Table
+/////
 table {
-	border-collapse: collapse;
+	text-align: center;
 	width: 100%;
-
-	th, td {
-		padding: 14px 15px 13px 15px;
-		border-bottom: 1px solid #DDDDDD;
+	border-collapse: collapse;
+	margin-bottom:3em;
+	caption {
+		font-size: 1.6em;
+		margin: 0 0 1em 0;
 	}
-	th { text-align: left; }
+	thead {
+		background-color: #2980B9;
+		color:#fff;
+		td, th {
+			padding:15px;
+			font-size:1.2em;
+			font-weight: 200;
+		}
+	}
+	tbody {
+		td, th {
+			background-color: #f9f9f9;
+			.transition(background-color, .3s, linear);
+			padding:10px;
+			font-size:1.2em;
+			font-weight: 200;
+			border: 1px solid #ddd;
+			&:hover {
+				background-color: #fff;
+			}
+			a {
+				display: block;
+				padding: 10px;
+				margin:-10px;
+				background-color: @link;
+				color:#fff;
+				text-decoration: none;
+			}
+		}
+	}
 }
