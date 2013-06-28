@@ -1,7 +1,0 @@
-# Folders to ignore
-node_modules
-
-# OS or Editor folders
-.DS_Store
-*.sublime-project
-*.sublime-workspace
